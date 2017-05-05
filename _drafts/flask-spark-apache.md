@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Flask Spark Apache
-date: '2017-05-5 16:28:01 +0700'
 categories: tutorial
 ---
 
@@ -11,11 +10,13 @@ Now I have a project about a text mining. I think python would be a proper langu
 
 Although, flask is easy to implement. It's not good for using in production. If you want to go for product, It would be better if you deploy with web service, such as, Apache, Nginx. I already had Apache so I go for Apache.
 
+*For location for the files, It shouldn't be in home because it might have a problem about a permission in Apache*
+
 # Let's get start
 
-1. Get a python
+1. Get a python 2
 
-   For this instruction, I prefer python 2 because python 3 might have a problem with spark. For windows, you can get via this link <https://www.python.org/> For Linux, you can use theses commands
+   For this instruction, I prefer python 2 because python 3 might have a problem with spark. For windows, you can get via this [link](https://www.python.org/) For Linux, you can use theses commands
 
      - Ubuntu
      > sudo apt-get install python
@@ -64,11 +65,22 @@ Although, flask is easy to implement. It's not good for using in production. If 
         app.run(host='0.0.0.0',port=3000)
       ```
 
-- You can edit port at `app.run()`
-
+   - You can edit port at `app.run()`
 > Test this service by using command `python hello.py` it will show that service is running on port 3000
 
-Finish in flask part, about Spark I do not tell how to install it. There is a lot of things to set it up. You can find guides on its official website. Also for Apache.
+4. Install Apache
+   - Ubuntu
+   > sudo apt-get apche2
+
+   - Arch Linux
+   > sudo pacman -S Apache
+
+   You can test by open a browser an go to `http://localhost`. It will show Apache's homepage
+
+5. Install Spark
+
+   Download pre-built version from [official website](http://spark.apache.org/downloads.html) and place somewhere
+
 
 # Let's connect flask to Apache
 
