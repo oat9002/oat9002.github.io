@@ -96,7 +96,7 @@ Before you can connect to Apache, You have to install `mod_wsgi`. This thing wil
     import os
     sys.path.insert(0, path_to_your_directory)
     sys.path.append('path_to_pyspark')
-    os.environ['SPARK_HOME'] = path_to_spark_home
+    os.environ['SPARK_HOME'] = path_to_spark
     from your_flask_application import app as application
     ```
 
