@@ -5,13 +5,11 @@ date:   2017-06-05 19:45:50 +0700
 categories: tutorial
 ---
 
-# Hi!
+In the 4th year of being a student of university, I had a senior project which was about a text mining. I had to create a system that could predict an emotion from texts.Texts are from social media, such as, Twitter. So, I thought python would be a proper language for this kind of work because there were a lot of libraries to use in this field. I also had to concern how to deal with a lot of data which flew to my service. Spark might be a good option to deal with this issue. However, I had not much time to study to create service using python. Fortunately, I had found one framework that easy to implement. It's called 'flask'.
 
-Now I have a project about a text mining. I think python would be a proper language because there is a lot of libraries to use in this field. I have to concern how to dead with a lot of data which flow to my service. Spark might be a good option to deal with this issue. However, I have not much time to study to create service using python. I have found one framework that easy to implement. It's called 'flask'.
+Although, flask is easy to implement. It's not good for using in production. If you want to go for product, It would be better if you deploy with web service, such as, Apache, Nginx. I already had Apache so I went for Apache.
 
-Although, flask is easy to implement. It's not good for using in production. If you want to go for product, It would be better if you deploy with web service, such as, Apache, Nginx. I already had Apache so I go for Apache.
-
-*For location for the files, It shouldn't be in home because it might have a problem about a permission in Apache*
+*For location for the files, It shouldn't be in home(Linux) because it might have a problem about a permission in Apache*
 
 # Let's get start
 
