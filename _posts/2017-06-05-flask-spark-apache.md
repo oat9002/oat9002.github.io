@@ -126,4 +126,4 @@ Before you can connect to Apache, You have to install `mod_wsgi`. This thing wil
       Require all granted
       ```
 
-4. Open a browser an type `http://localhost` you will see hello world
+4. Open a browser an type `http://localhost` you will see hello world and you can test other routes that we've just created
