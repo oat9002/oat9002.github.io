@@ -4,6 +4,7 @@ title: Flask Spark Apache
 date:   2017-06-05 19:45:50 +0700
 categories: tutorial
 ---
+#Hi
 
 In the 4th year of being a student of university, I had a senior project which was about a text mining. I had to create a system that could predict an emotion from texts. Texts were from social media, such as, Twitter. So, I thought python would be a proper language for this kind of work because there were a lot of libraries to use in this field. I also had to concern how to deal with a lot of data which flew to my service. Spark might be a good option to deal with this issue. However, I had not much time to study to create service using python. Fortunately, I had found one framework that easy to implement. It's called 'flask'.
 
