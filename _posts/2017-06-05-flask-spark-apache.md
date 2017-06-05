@@ -15,7 +15,7 @@ Although, flask is easy to implement. It's not good for using in production. If 
 
 1. Get a python 2
 
-   For this instruction, I prefer python 2 because python 3 might have a problem with spark. For windows, you can get via this [link](https://www.python.org/) For Linux, you can use theses commands
+   For this instruction, I prefer python 2 because python 3 might have a problem with spark. For windows, you can get via this [link](https://www.python.org/). For Linux, you can use theses commands
 
      - Ubuntu
      > sudo apt-get install python
