@@ -1,8 +1,6 @@
 ---
 layout: post
 title: Flask Spark Apache
-date:   2017-06-05 19:45:50 +0700
-categories: tutorial
 ---
 # Hi
 
