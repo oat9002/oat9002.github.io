@@ -6,46 +6,41 @@ categories: diary
 
 # Hi!
 
-It's been a while I haven't wrote any thing. Today I will talking about one of the most popular tech meetup event in Thailand, "ReactBkk 3.0". Why do I say the most popular? Becasue the tickets were sold in **12 seconds !**. However, I'm the one of that 12 seconds :grin:. Anyway let get started.
+It's been a while I haven't wrote any thing. Today I will talking about one of the most popular tech meetup event in Thailand, "ReactBkk 3.0". Why do I say the most popular? Becasue the tickets were sold in **12 seconds !**. However, I'm the one of that 12 seconds :grin:. What I will write after this, It might be have only keyword in some topic sbecause I couldn't note all what spekers said and sometimes I lost focus. Anyway let get started.
 
 ## React in 2018 
 
 Start with the summary about React in 2018. They talked about 3 topics below
+
 - Async rendering 
 - Deprecated 3 component life cycles 
 - Re-architech react native 
 
 ## Static web with gastby.js 
 
-This 
+This topic they demonstrated how to build the static website with gastby.js. If you love React and love writing a blog. You should try this!
 
 ## Static with next.js 
 
-Prefetch-link-gastby 
+This is like the previous topic but they used next.js instead. If you don't want to learn about GraphQL, you can try this one.
+
+- Prefetch-link-gastby 
 
 ## Firs time for GraphQL in production 
 
-Securing 
+They said about what should we take into account when we use GraphQL in productoin
 
-Limit query depth 
-
-Limit amount of returning data 
-
-Maintenance  
-
-Splitting schema 
-
-Monitoring  
-
-Using apollo engine 
-
-4 features, query execute tracing, error tracking, caching, trends 
-
- 
-
-Next js thailand, graph ql Thailand 
-
- 
+- Securing 
+  - Limit query depth 
+  - Limit amount of returning data 
+- Maintenance  
+  - Splitting schema 
+- Monitoring  
+  - Using apollo engine 
+    - Query execute tracing
+    - Error tracking
+    - Caching
+    - Trends 
 
 ## Kotlin love react 
 
@@ -162,3 +157,4 @@ React-test-library
 
 Cypress  
 
+Next js thailand, graph ql Thailand 
