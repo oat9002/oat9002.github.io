@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Very breifing ReactBkk 3.0
+title: Very briefing ReactBkk 3.0
 categories: diary
 ---
 
 # Hi!
 
-It's been a while I haven't wrote any thing. Today I will talking about one of the most popular tech meetup event in Thailand, "ReactBkk 3.0". Why do I say the most popular? Becasue the tickets were sold in **12 seconds !**. However, I'm the one of that 12 seconds :grin:. What I will write after this, It might be have only keyword in some topic sbecause I couldn't note all what spekers said and sometimes I lost focus. Anyway let get started.
+It's been a while I haven't wrote any thing. Today I will talking about one of the most popular tech meetup event in Thailand, "ReactBkk 3.0".It took place on 24 June 2018. Why do I say the most popular? Becasue the tickets were sold in **12 seconds !**. However, I'm the one of that 12 seconds :grin:. What I will write after this, It might be have only keyword in some topic sbecause I couldn't note all what spekers said and sometimes I lost focus. Anyway let get started.
 
 ## React in 2018 
 
@@ -24,11 +24,11 @@ This topic they demonstrated how to build the static website with gastby.js. If 
 
 This is like the previous topic but they used next.js instead. If you don't want to learn about GraphQL, you can try this one.
 
-- Prefetch-link-gastby 
+- Prefetch-link-gastby - make next.js fast like gastby.js
 
 ## Firs time for GraphQL in production 
 
-They said about what should we take into account when we use GraphQL in productoin
+They said about what should we take into account when we use GraphQL in production. 
 
 - Securing 
   - Limit query depth 
@@ -44,117 +44,91 @@ They said about what should we take into account when we use GraphQL in producto
 
 ## Kotlin love react 
 
-Can run every platform but frustration  
+Now Kotlin is become popular in a couple of years. If you love Kotlin and love React. Jetbrain guys don't disappoint you. They provide a way to use Kotlin with React. Just a simple command
 
-Kotlin multi platform 
-
-Create- react-kotlin-app 
-
- 
+- create-react-kotlin-app 
 
 ## Clojure script with reactjs 
 
-Clojure 
+In addition, Clojure also loves React. You can use Clojure along with React as well. They defined Clojure following theses keywords,
 
-Simplicity 
+- Simplicity 
+- Data oriented  
 
-Data oriented  
+They also gave some interesting things for beginner
 
-Pure function 
+- Reagent 
+- Re-frame 
+ 
+for Thai people if you want to start React with Clojure
 
-Immutable function 
-
-Fully interoperability  
-
-Reagent 
-
-React + clojure + data driven  
-
-Re-frame 
-
-Redux+ clojure 
-
-เริ่ม clojure - good keyword in Google 
-
-  
+- เริ่ม clojure - good keyword in Google 
 
 ## State with mobx 
 
-Mobx 
-
- 
+Mobx, one of the state management library which might be easier to start than redux. I've not tried it but it's interesting, isn't it? 
 
 ## Animation in react 
 
-Interaction natural  
+In the world of animation, these keywords might be usefull
 
-Use in appropriate way  
+- Interaction natural  
+- Use in appropriate way  
+- Communicating animation  
 
-Communicating animation  
+**Principle of Animation**
 
-Trigger 
+- Trigger -> Action -> Quality - easing, duration, properties(be careful) 
 
-Action 
+**Develop animation**
 
-Quality - easing, duration, properties(be careful) 
+- Native 
+  - css, might be complexity  
+  - Canvas, not easy to make it responsive or accessible  
+  - WebGl, like canvas 
 
-Develop animation 
-
- Native 
-
- css, might be complexity  
-
-Canvas, not easy to make it responsive or accessible  
-
-WebGl, like canvas 
-
-External libraries 
-
-Greensock(GSAP), licensing  
-
-Velocity react 
-
-React motion, learning curve, not good for timeline 
-
-React tween 
-
-Web animation api 
-
- 
+- External libraries 
+  - Greensock(GSAP)
+  - Velocity react 
+  - React motion - not good for timeline 
+  - React tween 
+  - Web animation api 
 
 ## Design pattern react 
 
-HOC, cons don’t know where is it come from? 
+- HOC - Higher Order Component
+  - cons - don’t know where is it come from? 
 
-Recompose 
-
-Render props 
-
- 
+- Render props 
 
 ## Performance tuning 
 
-React performance dev tool 
+- Use React performance dev tool 
 
-Pure component 
+- Keyword 
 
-Memonize- lamdajs 
-
-React-virtualize 
-
-Keyword -> React fiber,  
-
+  -  Memonize - lamda.js 
+  -  React-virtualize 
+  -  React fiber,  
  
 ## Testing 
 
-Avoid implementing detail 
+They seperated test in 3 procedures. Unitest -> Intregation -> E2E
 
-Enzyme 
+- Avoid implementing detail 
 
-ReactDOM 
+Some useful libraries
 
-React-test-library 
+- Enzyme 
+- React-test-library 
+- Cypress  
 
-Cypress  
+**Facebook group**
 
-Next js thailand, graph ql Thailand 
+- Next js thailand
+- graph ql Thailand 
+
+<div style="position:relative;text-align:center;height:800px">
+  <p style='font-size:36px'><b>See ya!</b></p>
+  <img style='position:relative;top:80px;transform: rotate(90deg)' src="/assets/img/reactbkk3_0.jpg" />
+</div>
