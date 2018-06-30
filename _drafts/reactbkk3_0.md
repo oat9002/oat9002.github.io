@@ -6,7 +6,7 @@ categories: diary
 
 # Hi!
 
-It's been a while I haven't wrote any thing. Today I will talking about one of the most popular tech meetup event in Thailand, "ReactBkk 3.0".It took place on 24 June 2018. Why do I say the most popular? Becasue the tickets were sold in **12 seconds !**. However, I'm the one of that 12 seconds :grin:. What I will write after this, It might be have only keyword in some topic sbecause I couldn't note all what spekers said and sometimes I lost focus. Anyway let get started.
+It's been a while I haven't written anything. Today I will talk about one of the most popular tech meetup event in Thailand, "ReactBkk 3.0".It took place on 24 June 2018. Why do I say the most popular? Because the tickets were sold in **12 seconds !**. However, I'm one of that 12 seconds :grin:. What I will write after this, It might have the only keyword in some topics because I couldn't note all that speakers said and sometimes I lost focus. Anyway, let get started.
 
 ## React in 2018 
 
@@ -14,7 +14,7 @@ Start with the summary about React in 2018. They talked about 3 topics below
 
 - Async rendering 
 - Deprecated 3 component life cycles 
-- Re-architech react native 
+- Re-architect react native 
 
 ## Static web with gastby.js 
 
@@ -24,9 +24,9 @@ This topic they demonstrated how to build the static website with gastby.js. If 
 
 This is like the previous topic but they used next.js instead. If you don't want to learn about GraphQL, you can try this one.
 
-- Prefetch-link-gastby - make next.js fast like gastby.js
+- Prefetch-link-gatsby - make next.js fast like gastby.js
 
-## Firs time for GraphQL in production 
+## First time for GraphQL in production 
 
 They said about what should we take into account when we use GraphQL in production. 
 
@@ -36,7 +36,7 @@ They said about what should we take into account when we use GraphQL in producti
 - Maintenance  
   - Splitting schema 
 - Monitoring  
-  - Using apollo engine 
+  - Using Apollo engine 
     - Query execute tracing
     - Error tracking
     - Caching
@@ -44,36 +44,36 @@ They said about what should we take into account when we use GraphQL in producti
 
 ## Kotlin love react 
 
-Now Kotlin is become popular in a couple of years. If you love Kotlin and love React. Jetbrain guys don't disappoint you. They provide a way to use Kotlin with React. Just a simple command
+Now Kotlin has become popular in a couple of years. If you love Kotlin and love React. Jetbrain guys don't disappoint you. They provide a way to use Kotlin with React. Just a simple command
 
 - create-react-kotlin-app 
 
-## Clojure script with reactjs 
+## Clojure script with Reactjs 
 
 In addition, Clojure also loves React. You can use Clojure along with React as well. They defined Clojure following theses keywords,
 
 - Simplicity 
-- Data oriented  
+- Data-oriented  
 
-They also gave some interesting things for beginner
+They also gave some interesting things for a beginner
 
 - Reagent 
 - Re-frame 
  
-for Thai people if you want to start React with Clojure
+For Thai people, if you want to use React with Clojure
 
-- เริ่ม clojure - good keyword in Google 
+- เริ่ม Clojure - good keyword in Google 
 
-## State with mobx 
+## State with Mobx 
 
 Mobx, one of the state management library which might be easier to start than redux. I've not tried it but it's interesting, isn't it? 
 
-## Animation in react 
+## Animation in React 
 
-In the world of animation, these keywords might be usefull
+In the world of animation, these keywords might be useful
 
 - Interaction natural  
-- Use in appropriate way  
+- Use inappropriate way  
 - Communicating animation  
 
 **Principle of Animation**
@@ -83,9 +83,9 @@ In the world of animation, these keywords might be usefull
 **Develop animation**
 
 - Native 
-  - css, might be complexity  
+  - CSS, might be complexity  
   - Canvas, not easy to make it responsive or accessible  
-  - WebGl, like canvas 
+  - WebGL, like canvas 
 
 - External libraries 
   - Greensock(GSAP)
@@ -125,8 +125,8 @@ Some useful libraries
 
 **Facebook group**
 
-- Next js thailand
-- graph ql Thailand 
+- Next js Thailand
+- GraphQL Thailand 
 
 <div style="position:relative;text-align:center;height:800px">
   <p style='font-size:36px'><b>See ya!</b></p>
