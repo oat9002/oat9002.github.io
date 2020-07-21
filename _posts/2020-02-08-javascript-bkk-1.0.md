@@ -106,7 +106,7 @@ This is kind of live coding if I remember correctly. Thus, I do not have much to
 
 They show how to do D.I.Y dance-mat by some D.I.Y things and rasbery pi if I recall correctly.
 
-## Speed up heavy data visualization with Rust and WebAssembly
+## Speed up heavy data visualization with Rust and <br/> WebAssembly
 
 -   Rust love WebAssembly
 -   D3-wasm-force
