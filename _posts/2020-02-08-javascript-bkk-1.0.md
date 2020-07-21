@@ -120,3 +120,7 @@ Showing live coding, how to write automate program to like girls in tinder
 -   Gluegun, oclift
 
 These are what I have for that event. It is such a good event. If in the future there is, I will join for sure. Until that time, **see ya!**
+
+<p style="text-align:center">
+    <img src="https://p-u.popcdn.net/event_details/posters/000/007/210/large/63ac572ee5f044ce27f75683c4e8f995210a4e12.png?1583181928" width="300px">
+</p>
