@@ -28,7 +28,7 @@ It has been a while I haven't been to any big tech event. This is my first event
     -   recast
 -   AST -> Abstract Syntax Transform
 
-## React practice from functional programming from Javascript
+## React practice from functional programming from <br/> Javascript
 
 -   First class function
 -   Anonymoush function
