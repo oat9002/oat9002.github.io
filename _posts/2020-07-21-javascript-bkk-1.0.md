@@ -100,7 +100,7 @@ This is more about modding the game flow. In the past, when there was not much t
 
 ## Building your first malicious chrome extension
 
-This is kind of live coding if I remember correctly. Thus, I do not have much to tell lol.
+This is kind of live coding, if I remember correctly. Thus, I do not have much to tell lol.
 
 ## The story of dance-mat.js
 
