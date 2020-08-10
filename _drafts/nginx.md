@@ -51,6 +51,14 @@ You should see `Hello world` text return from API
 
 ## Create self-signed certficate
 
+You can use this command to create self-signed certificate. You will be asked to fill in the pass phase. That password also be needed for NGINX. Create a file to keep it.
+
+```bash
+$ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
+```
+
+You can place certificate and key whereever you like. For this example, it will be in `/root/cert`
+
 ## Configure NGINX
 
 Before you config NGINX, you need to have a program first. There are a lot of OS in this world. Thus, I cannot give you all how to install nginx in each OS. I will give you the easy one, Ubuntu.
@@ -64,7 +72,7 @@ Easy, isn't it?
 
 Then, you go to `/etc/nginx/conf.d` . If there is an example file, rename that file to something with suffix `.conf.bk` to be ignored by NGINX.
 
-Create a new file with suffix **conf.d** . E.g. host.conf and put this config into that file
+Create a new file with suffix `conf.d` . E.g. host.conf and put this config into that file
 
 ```
 server {
