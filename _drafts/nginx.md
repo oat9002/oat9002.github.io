@@ -61,7 +61,7 @@ You can place certificate and key whereever you like. For this example, it will 
 
 ## Configure NGINX
 
-Before you config NGINX, you need to have a program first. There are a lot of OS in this world. Thus, I cannot give you all how to install nginx in each OS. I will give you the easy one, Ubuntu.
+Before you config NGINX, you need to have a program first. There are a lot of OS in this world. Thus, I cannot give you all how to install nginx in each OS. I will give you the easy one instead, which is Ubuntu haha.
 
 ```bash
 $ sudo apt update
@@ -88,3 +88,13 @@ server {
     }
 }
 ```
+
+After that you can restart NGINX by this command
+
+```bash
+$ sudo systemctl restart nginx
+```
+
+> Tip: You can make NGINX start at the startup by ussing this command `$ sudo systemctl enable nginx`
+
+Let's test it. Open browser and go to `https://<your-server-domain or server-ip>/hello`. You should see `Hello world` return back from API.
