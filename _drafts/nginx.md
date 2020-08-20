@@ -51,7 +51,7 @@ You should see `Hello world` text return from API
 
 ## Create self-signed certficate
 
-You can use this command to create self-signed certificate. You will be asked to fill in the pass phase. That password also be needed for NGINX. Create a file to keep it.
+You can use this command to create self-signed certificate. You will be asked to fill in the pass phase. That password also be needed for NGINX. Thus, create a file to keep it.
 
 ```bash
 $ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
