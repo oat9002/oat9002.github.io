@@ -5,7 +5,7 @@ title: Javascript Bangkok 1.0
 
 # Hi, Javacript Bankgkok 1.0
 
-It has been a while I haven't been to any big tech event. This is my first event and might be the last event for this year..... because of covid-19. Javascript is one of the most popular language these days. You learn once you can use it for both backend and frontend. Such a cool lang ha. However, for this post, When I am writing. It is 5 months later from the event date, 8 Feburary 2020, so I almost forget everything hahaha. Thus, this post will be just a short note for the topic which I can recall lol.
+It has been a while I haven't been to any big tech event. This is my first event and might be the last event for this year..... because of covid-19. Javascript is one of the most popular language these days. You learn once you can use it for both backend and frontend. Such a cool lang ha. However, for this post, when I am writing this. It is 5 months later from the event date, 8 Feburary 2020, so I almost forget everything. Thus, this post will be just a short note for the topic which I can recall.
 
 ## A journey of building large scale reusable web components
 
@@ -14,7 +14,7 @@ It has been a while I haven't been to any big tech event. This is my first event
 -   Testing
     -   Component quality > Product Quality
 
-## Obtimize design pattern for game to web
+## Optimize design pattern for game to web
 
 -   Memory Allocation
     -   Use object pool
@@ -57,13 +57,13 @@ It has been a while I haven't been to any big tech event. This is my first event
 
 ## People & Process
 
--   Remote collabt tips
+-   Remote collaboration tips
     -   Priority alignment
         > **Not everything is priority**
     -   Regular syncing
     -   Real time sometimes, async most of the time
 
-## Adventrue of the eventloop
+## Adventure of the eventloop
 
 -   event-loop.ez.codes
 
@@ -80,7 +80,7 @@ It has been a while I haven't been to any big tech event. This is my first event
 -   Avoiding burnout
 -   Manage your time!
 
-<ins>**How to achive**</ins>
+<ins>**How to achieve**</ins>
 
 -   Organize your time and energy
 -   Find a pace where give you a balance!
@@ -104,7 +104,7 @@ This is kind of live coding, if I remember correctly. Thus, I do not have much t
 
 ## The story of dance-mat.js
 
-They show how to do D.I.Y dance-mat by some D.I.Y things and rasbery pi if I recall correctly.
+They show how to do D.I.Y dance-mat by some D.I.Y things and raspberry pi if I recall correctly.
 
 ## Speed up heavy data visualization with Rust and <br/> WebAssembly
 
