@@ -100,4 +100,4 @@ $ sudo systemctl restart nginx
 
 > Tip: You can make NGINX start at the startup by ussing this command `$ sudo systemctl enable nginx`
 
-Let's test it. Open browser and go to `https://<your-server-domain or server-ip>/hello`. You should see `Hello world` return back from API.
+Let's test it. Open a browser and go to `https://<your-server-domain or server-ip>/hello`. You should see `Hello world` return back from API.
