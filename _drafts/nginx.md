@@ -5,13 +5,18 @@ title: Proxy pass with Nginx at the ease!
 
 # Hi, NGINX!
 
-Some of you might know about NGINX. Some of you might not. So mayne it is good to explain about it a bit. From official [website](https://www.nginx.com/resources/glossary/nginx/), it is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. It started out as a web server designed for maximum performance and stability. This is a first couple of sentences from website. Maybe this is too abstract, to explain in the pragmatic way, it is the tool which can help you manange the request that come into the server. For instance, if there are more than 1 service in you servers, NGINX can help you redirect the request to the correct service.
+Some of you might know about NGINX. Some of you might not. So perhaps it would be good to explain about it a bit. From official [website](https://www.nginx.com/resources/glossary/nginx/), it is `open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. It started out as a web server designed for maximum performance and stability`. This is a first couple of sentences from website. Maybe this is too abstract, to explain in the pragmatic way, it is the tool which can help you manange the request whoch come into the server. For instance, if there are more than 1 service in you servers, NGINX can help you redirect the request to the correct service. You can also spwan your application more than 1 instance and let NGINX do the load balancing.
 
-Today I will show you how to setup the NGINX for your backend API, using https with self-signed certificate. So first I will create sample backend API by using Express.js. Let's get started!
+Today I will show you how to setup the NGINX for your backend API, using https with self-signed certificate, in linux. For API, I will create sample web server by Express.js. Let's get started!
+
+## Prerequisite
+
+1. Node (I'm using version 14.8.0)
+2. Ubuntu or other distro
 
 ## Create an API
 
-It requires either **npm** or **yarn**. I will use **yarn** in this example
+You can use either **npm** or **yarn**. I will use **yarn** in this example
 
 1. Run command
 
@@ -61,14 +66,12 @@ You can place certificate and key whereever you like. For this example, it will 
 
 ## Configure NGINX
 
-Before you config NGINX, you need to have a program first. There are a lot of OS in this world. Thus, I cannot give you all how to install nginx in each OS. I will give you the easy one instead, which is Ubuntu haha.
+Before you config NGINX, you need to have a program first. You cannot use NGINX without NGINX installed. To install, you can run this command
 
 ```bash
 $ sudo apt update
 $ sudo apt install nginx
 ```
-
-Easy, isn't it?
 
 Then, you go to `/etc/nginx/conf.d` . If there is an example file, rename that file to something with suffix `.conf.bk` to be ignored by NGINX.
 
