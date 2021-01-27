@@ -21,6 +21,10 @@
         display: none;
     }
 
+    .webring-icon {
+        color: $brand-color;
+    }
+
     @include media-query($on-palm) {
         position: absolute;
         top: 3px;
@@ -107,6 +111,11 @@
 .page-heading {
     font-size: 20px;
     padding-top: 2px;
+    display: inline;
+}
+
+.webring-icon {
+    margin-bottom: 12px;
 }
 
 /* Archive
