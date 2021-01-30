@@ -16,18 +16,19 @@
 title: Viva!
 email: oat9002@hotmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+    Welcome to very cool blog which you will find a lot of things here. Especially about programming and my life ;)
+# Write an awesome description for your new site here. You can edit this
+# line in _config.yml. It will appear in your document head meta (for
+# Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  oat9002
+url: "https://blog.oatto.dev" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: oat9002
 
 # Build settings
 markdown: kramdown
 gems:
-  - jekyll-feed
-  - jemoji
+    - jekyll-feed
+    - jemoji
 exclude:
-  - Gemfile
-  - Gemfile.lock
+    - Gemfile
+    - Gemfile.lock
