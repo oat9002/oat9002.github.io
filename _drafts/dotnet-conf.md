@@ -1,6 +1,6 @@
 ---
 layout: post
-title: dotnet conference 2021
+title: Dotnet conference 2021
 ---
 
 # Hi!
@@ -9,7 +9,7 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 
 ## Discovery the world of .NET
 
-### What's new in .NET 5
+##### What's new in .NET 5
 
 -   Window forms Disigner
 -   Blazor WebAssembly
@@ -18,7 +18,7 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
     -   Lazy loading
     -   CSS isolation
 
-### What really new in .NET 5
+##### What really new in .NET 5
 
 -   Lots of performance improve
     -   30% socket performance
@@ -74,7 +74,7 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 
 ## High-performance services with gRPC
 
-### HTTP/2
+#### HTTP/2
 
 -   Multiplex (solve the request pipline block)
 -   Single TCP connection parallellism
@@ -82,7 +82,7 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 -   Header compression
 -   Streaming
 
-### What are REST problems?
+#### What are REST problems?
 
 -   Rest cannot use some features
 -   Textual represented (JSON)
@@ -90,7 +90,7 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 -   Bidirection streaming is not possible
 -   Need to do Authentication, healthcheck, loadbalance...
 
-### gRPC
+#### gRPC
 
 -   Modern high-performance Remote Procedure Call framework
     -   gRPC = HTTP/2 + protobuf
@@ -98,7 +98,7 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
     -   Client - gRPC stub
     -   Server -> gRPC service
 
-### Performance improve in .NET 5
+#### Performance improve in .NET 5
 
 -   Reduce latency, improve concurrency
 -   HTTP/2 allocation reduce 92%
@@ -112,19 +112,19 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 -   Support SQL server, MySQL, Postgresql ....
 -   Query using language integrated (LINQ)
 
-### EF 101
+#### EF 101
 
 -   Model class
 -   Data Context
 -   Strongly Type
 -   Set an entity's property to update data in database
 
-### Many to Many
+#### Many to Many
 
 -   Remove link
 -   Explicit mapping
 
-### TPH & TPT
+#### TPH & TPT
 
 -   Table per hierachy (TPH) - All typs in the hierachy save to single table
 -   Table per Type (TPT) - Same each type in hierachy to different table
@@ -139,7 +139,7 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 
 -   Form recognizer is a cognitive service
 
-### Form recognizer service
+#### Form recognizer service
 
 -   Prebuild model
     -   receipt
@@ -149,4 +149,6 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 
 ## Breaking the monolith
 
-You can watch full video [here](https://www.youtube.com/watch?v=-iQkrvBBcTA&ab_channel=.NETFoundation)
+p.s. You can watch full video [here](https://www.youtube.com/watch?v=-iQkrvBBcTA&ab_channel=.NETFoundation).
+
+# See ya!
