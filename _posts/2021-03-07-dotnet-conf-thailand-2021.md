@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dotnet conference 2021
+title: Dotnet conference Thailand 2021
 ---
 
 # Hi!
@@ -52,6 +52,8 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 
 ## Develop/Debug.NET Core with Microsoft Bridge to K8s
 
+This section I didn't listen, please do watch the full video :)
+
 ## Github Action with .NET
 
 -   Github Action?
@@ -65,6 +67,8 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 -   The rest they are show code example
 
 ## Devops & Identity Management with Azure
+
+This section I didn't listen, please do watch the full video :)
 
 ## Azure static web app with Github Action
 
@@ -105,6 +109,8 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 -   Kestrel support response header compression
 
 ## Securing Blazor WebAssembly
+
+This section I didn't listen, please do watch the full video :)
 
 ## Entity Framework Core 5.0
 
@@ -148,6 +154,37 @@ It has been a while I haven not wrote any content. Anyhow, because of this, I ha
 -   Customer model - Layout API
 
 ## Breaking the monolith
+
+#### Key Principle of new design
+
+-   Domain Isolation (Flight Repo | Post booking Repo | Hotels Repo)
+-   Full-Stack Repository
+-   End-to-End Ownership
+
+#### Modular Architecture
+
+Domain based web application : Module
+
+-   Build one website with backend for frontend
+-   One team owner
+    -   Control dependencies
+    -   Control controller
+-   Boostrap nuget package
+    -   Host => wesite setup, managing convention, register to distributed network
+    -   Middleware
+    -   Context specific data
+    -   Core Service
+    -   Client side commons, Razor layout, desktop and mobile web
+
+## Serverless applications with an API first approach
+
+#### The benefit
+
+-   Development in parallel - define interface, do mocky
+-   Reduce cost - reuse
+-   INcrease time-to-market
+-   Ensure good development exprerience
+-   Reduce risk of failure
 
 p.s. You can watch full video [here](https://www.youtube.com/watch?v=-iQkrvBBcTA&ab_channel=.NETFoundation).
 
