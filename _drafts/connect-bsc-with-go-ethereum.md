@@ -43,3 +43,10 @@ contract MyContract {
 }
 
 ```
+
+การทำงาน contract ด้านบนจะเป็นการนับขึ้นหรือนับลงสำหรับ address ที่มากระทำกับ contract นี้
+
+4.  compile contract ของเรา
+5.  test contract เราโดยการ deploy contract ไปที่ `JavaScript VM (London)` environment
+6.  เมื่อเราคลิก `Deploy` จะมี `Deployed Contracts` ปรากฎอยู่ด้านล่าง
+7.  ลองทกสอบ contract ของเราโดยลองคลิก increase, decrease หรือ getYourCounter
