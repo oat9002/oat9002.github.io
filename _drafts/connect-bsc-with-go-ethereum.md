@@ -71,4 +71,11 @@ $ docker run --rm -v <path-to-project>/smart-contract-connector:/sources ethereu
 ```
 
 5.  เราจะได้ไฟล์ `MyContract.go` ถ้าเราเปิดไฟล์นั้นไม่ได้ให้ใช้คำสั่ง `sudo chown <your-user>:<your-user> ./contracts/MyContract.go` และ `sudo chmod 755 ./contracts/MyContract.go` เพื่อเพิ่มสิทธิการเข้าถึงไฟล์
-6.
+6.  สร้างไฟล์ชื่อ `main.go`
+7.  copy code ด้านล่างไปยังไฟล์ `main.go`
+
+```
+```
+
+8.  จากนั้นให้ใช้คำสั่ง `go mod tidy` เพื่อ fetch dependencies ที่ใช้
+9.  ใช้คำสั่ง `go rum main.go` เพื่อ run app ของเรา
