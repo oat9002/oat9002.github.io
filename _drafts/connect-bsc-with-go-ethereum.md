@@ -62,7 +62,7 @@ contract MyContract {
 
 1.  สร้าง folder ชือ `smart-contract-connect` ไว้ที่ไหนก็ได้
 2.  เข้าไปใน folder เเล้วสร้าง folder ชื่อ `contracts`
-3.  ใช้คำสั่ง `go mod init smart-contract-connect` จะได้ไฟล์ `go.moc` มา
+3.  ใช้คำสั่ง `go mod init smart-contract-connect` จะได้ไฟล์ `go.mod` มา
 4.  จากขั้นตอนการสร้าง Smart Contract ที่เรา copy ABI เก็บเอาไว้ ให้สร้างไฟลฺ์ชื่อ `MyContract.abi` เเล้วเอา data เข้าไปใส่ในไฟล์นั้น
 5.  สร้าง go interface ที่จะต่อกับ contract ด้วยคำสั่งต่อไปนี้
 
@@ -72,11 +72,118 @@ $ docker run --rm -v <path-to-project>/smart-contract-connector:/sources ethereu
 
 5.  เราจะได้ไฟล์ `MyContract.go` ถ้าเราเปิดไฟล์นั้นไม่ได้ให้ใช้คำสั่ง `sudo chown <your-user>:<your-user> ./contracts/MyContract.go` และ `sudo chmod 755 ./contracts/MyContract.go` เพื่อเพิ่มสิทธิการเข้าถึงไฟล์
 6.  สร้างไฟล์ชื่อ `main.go`
-7.  copy code ด้านล่างไปยังไฟล์ `main.go`
+7.  copy code ด้านล่างไปยังไฟล์ `main.go` จากนั้นใส่ค่าตัวแปรที่จำเป็นลงไปแล้ว save ไฟล์
 
+```go
+package main
+
+import (
+	"context"
+	"crypto/ecdsa"
+	"fmt"
+	"log"
+	"math/big"
+
+	MyContract "smart-contract-connector/contracts"
+
+	"github.com/ethereum/go-ethereum/accounts/abi/bind"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/ethclient"
+)
+
+const bscTestNetworkUrl = "https://data-seed-prebsc-1-s1.binance.org:8545/"
+const bscTestNetworkChainId = 97
+const privateKey = ""        // put your private key here
+const publicKey = ""         // put your public key here
+const MyContractAddress = "" // put your contract address here
+
+func main() {
+	client, err := ethclient.Dial(bscTestNetworkUrl) // bsc test network
+
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+
+	contract, err := MyContract.NewMyContract(common.HexToAddress(MyContractAddress), client)
+
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+
+	// increase counter
+	txOpts, err := GetDefautlTransactionOpts(client, privateKey, bscTestNetworkChainId)
+
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+
+	contract.Increase(txOpts)
+
+	// get counter
+	callOpts := GetDefaultCallOpts(publicKey)
+	counter, err := contract.GetYourCounter(callOpts)
+
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+
+	fmt.Println(counter.Text(10))
+}
+
+// Get default CallOpts
+func GetDefaultCallOpts(publicKey string) *bind.CallOpts {
+	return &bind.CallOpts{Pending: false, From: common.HexToAddress(publicKey), BlockNumber: nil, Context: nil}
+}
+
+// Get default TransactionOpts
+func GetDefautlTransactionOpts(client *ethclient.Client, privateKeyStr string, chainId uint64) (*bind.TransactOpts, error) {
+	privateKey, err := crypto.HexToECDSA(privateKeyStr)
+	if err != nil {
+		return nil, err
+	}
+
+	publicKey := privateKey.Public()
+	publicKeyECDSA, ok := publicKey.(*ecdsa.PublicKey)
+	if !ok {
+		return nil, err
+	}
+
+	fromAddress := crypto.PubkeyToAddress(*publicKeyECDSA)
+
+	nonce, err := client.PendingNonceAt(context.Background(), fromAddress)
+	if err != nil {
+		return nil, err
+	}
+
+	gasPrice, err := client.SuggestGasPrice(context.Background())
+	if err != nil {
+		return nil, err
+	}
+
+	txOpts, err := bind.NewKeyedTransactorWithChainID(privateKey, big.NewInt(int64(chainId)))
+	if err != nil {
+		return nil, err
+	}
+
+	txOpts.Nonce = big.NewInt(int64(nonce))
+	txOpts.Value = big.NewInt(0)
+	txOpts.GasLimit = 3000000
+	txOpts.GasPrice = gasPrice
+
+	return txOpts, nil
+}
 ```
 
-```
+[Source code](./assets/connect-bsc-with-go-ethereum/code.zip)
 
 8.  จากนั้นให้ใช้คำสั่ง `go mod tidy` เพื่อ fetch dependencies ที่ใช้
-9.  ใช้คำสั่ง `go rum main.go` เพื่อ run app ของเรา
+9.  ใช้คำสั่ง `go run main.go` เพื่อ run app ของเรา จากนั้นลองเช็คผลลัพธ์จาก terminal
+
+จบไปเเล้วนะครับสำหรับการสร้าง smart contract และการเขียนโปรแกรมเพื่อที่จะไปต่อ smart contract ที่เราสร้าง ไว้เจอกันใหม่นะครับ
+
+# See ya!
