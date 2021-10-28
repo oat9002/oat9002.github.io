@@ -12,8 +12,8 @@ categories: tutorial
 
 ## สิ่งที่ต้องมีก่อนที่จะเริ่มทำ
 
--   account บน metamask ที่มี BNB บน testnet ของ BSC
-    -   ผมใช้ metamask google chrome extension เป็นตัวจัดการ สามารถไปค้นหาวิธีการสร้าง account เเละการ setup ให้ account ของเราไปต่อกับ test network และขอ BNB ฟรีใน google ได้
+-   บน metamask ที่มี BNB บน testnet ของ BSC
+-   ผมใช้ metamask google chrome extension เป็นตัวจัดการ สามารถไปค้นหาวิธีการสร้าง account เเละการ setup ให้ account ของเราไปต่อกับ test network และขอ BNB ฟรีใน google ได้
 -   golang version >= 1.11
 -   docker สำหรับรัน abigen
 
@@ -95,9 +95,9 @@ import (
 
 const bscTestNetworkUrl = "https://data-seed-prebsc-1-s1.binance.org:8545/"
 const bscTestNetworkChainId = 97
-const privateKey = ""        // put your private key here
-const publicKey = ""         // put your public key here
-const MyContractAddress = "" // put your contract address here
+const privateKey = ""        // ใส่ private key ครงนี้
+const publicKey = ""         // ใส่ public key ตรงนี้
+const MyContractAddress = "" // ใส่ contract address ตรงนี้
 
 func main() {
 	client, err := ethclient.Dial(bscTestNetworkUrl) // bsc test network
@@ -184,6 +184,10 @@ func GetDefautlTransactionOpts(client *ethclient.Client, privateKeyStr string, c
 
 8.  จากนั้นให้ใช้คำสั่ง `go mod tidy` เพื่อ fetch dependencies ที่ใช้
 9.  ใช้คำสั่ง `go run main.go` เพื่อ run โปรแกรมของเรา จากนั้นลองเช็คผลลัพธ์จาก terminal
+
+ปกติแล้วถ้าเราสร้างโปรแกรมเพื่อจะอ่านข้อมูลจาก blockchain เพียวอย่างเดียวจะไม่จำเป็นต้องใช้ private key แต่ถ้าเราจะเปลี่ยนแปลงบางอย่างบน blockchain ในกรณีนี้จำเป็นที่จะต้องใ้ private key
+
+> private key อันนี้สำคัญมาก ไม่ควรจะเผยแพร่ให้คนอื่นรู้ เพราะถ้าคนอื่นรู้เค้าจะสามารถทำอะไรก็ได้กับกระเป๋าเงินของ
 
 จบไปเเล้วนะครับสำหรับการสร้าง smart contract และการเขียนโปรแกรมเพื่อที่จะไปต่อ smart contract ที่เราสร้างไว้ แล้วเจอกันใหม่นะครับ
 
