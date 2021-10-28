@@ -19,9 +19,9 @@ categories: tutorial
 
 ## สร้าง Smart Contract แบบง่าย ๆ
 
-การเขียน Smart Contract บน BSC จะใช้ภาษา solidity ซึ่งเป็นภาษาเดียวกันกับ Smart Contract บน Ethereum และการ deploy Smart Contract ของเรานั้นจะใช้ https://remix.ethereum.org/ deploy
+การเขียน Smart Contract บน BSC จะใช้ภาษา solidity ซึ่งเป็นภาษาเดียวกันกับ Smart Contract บน Ethereum และการ deploy Smart Contract ของเรานั้นจะใช้ [remix](https://remix.ethereum.org/) ในการ deploy
 
-1.  ให้เข้าไปที่เว็บ https://remix.ethereum.org/ แล้วจะเจอหน้าแรกแบบนี้
+1.  ให้เข้าไปที่เว็บ [remix](https://remix.ethereum.org/) แล้วจะเจอหน้าแรกแบบนี้
 2.  ในแถบด้านซ้าย ให้สร้างไฟล์ `MyContract.sol` ในโฟล์เดอร์ `contracts`
 3.  ก๊อปปี้โค้ดด้านล่างไปที่ไฟล์ MyContract.sol ที่เราสร้างไว้
 
@@ -180,7 +180,7 @@ func GetDefautlTransactionOpts(client *ethclient.Client, privateKeyStr string, c
 }
 ```
 
-[Source code](./assets/connect-bsc-with-go-ethereum/code.zip)
+[Source code](/assets/connect-bsc-with-go-ethereum/code.zip)
 
 8.  จากนั้นให้ใช้คำสั่ง `go mod tidy` เพื่อ fetch dependencies ที่ใช้
 9.  ใช้คำสั่ง `go run main.go` เพื่อ run โปรแกรมของเรา จากนั้นลองเช็คผลลัพธ์จาก terminal
