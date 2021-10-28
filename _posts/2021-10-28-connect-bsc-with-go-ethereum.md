@@ -182,8 +182,8 @@ func GetDefautlTransactionOpts(client *ethclient.Client, privateKeyStr string, c
 
 [Source code](/assets/connect-bsc-with-go-ethereum/code.zip)
 
-8.  จากนั้นให้ใช้คำสั่ง `go mod tidy` เพื่อ fetch dependencies ที่ใช้
-9.  ใช้คำสั่ง `go run main.go` เพื่อ run โปรแกรมของเรา จากนั้นลองเช็คผลลัพธ์จาก terminal
+8.  จากนั้นให้ใช้คำสั่ง `go mod tidy` เพื่อดาวน์โหลด dependencies ที่ใช้
+9.  ใช้คำสั่ง `go run main.go` เพื่อรันโปรแกรมของเรา จากนั้นลองเช็คผลลัพธ์จาก terminal
 
 ปกติแล้วถ้าเราสร้างโปรแกรมเพื่อจะอ่านข้อมูลจาก blockchain เพียวอย่างเดียวจะไม่จำเป็นต้องใช้ private key แต่ถ้าเราจะเปลี่ยนแปลงบางอย่างบน blockchain ในกรณีนี้จำเป็นที่จะต้องใ้ private key
 
