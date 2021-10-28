@@ -100,7 +100,7 @@ const publicKey = ""         // ใส่ public key ตรงนี้
 const MyContractAddress = "" // ใส่ contract address ตรงนี้
 
 func main() {
-	client, err := ethclient.Dial(bscTestNetworkUrl) // bsc test network
+	client, err := ethclient.Dial(bscTestNetworkUrl)
 
 	if err != nil {
 		log.Fatal(err)
