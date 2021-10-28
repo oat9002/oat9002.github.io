@@ -23,7 +23,7 @@ categories: tutorial
 
 1.  ให้เข้าไปที่เว็บ [remix](https://remix.ethereum.org/) แล้วจะเจอหน้าแรกแบบนี้
 2.  ในแถบด้านซ้าย ให้สร้างไฟล์ `MyContract.sol` ในโฟล์เดอร์ `contracts`
-3.  ก๊อปปี้โค้ดด้านล่างไปที่ไฟล์ MyContract.sol ที่เราสร้างไว้
+3.  ก๊อปปี้โค้ดด้านล่างไปที่ไฟล์ `MyContract.sol` ที่เราสร้างไว้
 
 ```
 // SPDX-License-Identifier: MIT
