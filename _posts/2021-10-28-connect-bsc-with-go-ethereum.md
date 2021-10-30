@@ -72,7 +72,7 @@ contract MyContract {
 9.  ตัว metamask จะมีการขอ permission ให้เราต่อกับเว็บ remix ซึ่งให้ allow ไป
 10. ให้ลอง deploy contract เเล้วก็ลองเทส contract ดู
 
-    **_ป.ล. ให้ copy contract address เก็บไว้ด้วย_**
+    > _ป.ล. ให้ copy contract address เก็บไว้ด้วย_
 
 ## สร้าง application ที่จะต่อกับ Smart Contract ที่เรา deploy ไป
 
