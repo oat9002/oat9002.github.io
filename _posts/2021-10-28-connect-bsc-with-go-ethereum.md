@@ -22,7 +22,13 @@ categories: tutorial
 การเขียน Smart Contract บน BSC จะใช้ภาษา solidity ซึ่งเป็นภาษาเดียวกันกับ Smart Contract บน Ethereum และการ deploy Smart Contract ของเรานั้นจะใช้ [remix](https://remix.ethereum.org/) ในการ deploy
 
 1.  ให้เข้าไปที่เว็บ [remix](https://remix.ethereum.org/) แล้วจะเจอหน้าแรกแบบนี้
+
+    ![remix home](/assets/connect-bsc-with-go-ethereum/home-remix.png)
+
 2.  ในแถบด้านซ้าย ให้สร้างไฟล์ `MyContract.sol` ในโฟล์เดอร์ `contracts`
+
+    ![remix new MyContract](/assets/connect-bsc-with-go-ethereum/remix-new-MyContract.png)
+
 3.  ก๊อปปี้โค้ดด้านล่างไปที่ไฟล์ `MyContract.sol` ที่เราสร้างไว้
 
 ```
@@ -50,8 +56,17 @@ contract MyContract {
 การทำงาน contract ด้านบนจะเป็นการนับขึ้นหรือนับลงสำหรับ address ที่มากระทำกับ contract นี้ จะเห็นได้ว่าเมื่อเราทำการ increase หรือ decrease counter ether ใน account test ที่ ของเราจะลดลงเรื่อย ที่เป็นแบบนั้นเพราะว่าการเปลี่ยนแปลงใน blockchain แต่ละครั้งจะต้องมีการ validate transaction ซึ่งเราจะต้องเสียค่าธรรมเนียมให้กับการ validate นั้น
 
 4.  คอมไพล์ contract ของเรา **_ให้ก๊อปปี้ ABI เก็บไว้เพื่อใช้ในการสร้าง interface ที่จะถูกใช้โดยโปรแกรมของเรา_**
+
+    ![remix compile](/assets/connect-bsc-with-go-ethereum/remix-compile.png)
+
 5.  ทดสอบ contract เราโดยการ deploy contract ไปที่ `JavaScript VM (London)` environment
+
+    ![remix before deploy](/assets/connect-bsc-with-go-ethereum/remix-before-deploy.png)
+
 6.  เมื่อเราคลิก `Deploy` จะมี `Deployed Contracts` ปรากฎอยู่ด้านล่าง
+
+    ![remix after deploy](/assets/connect-bsc-with-go-ethereum/remix-after-deploy.png)
+
 7.  ลองทดสอบ contract ของเราโดยลองคลิก increase, decrease หรือ getYourCounter
 8.  เมื่อมันใจเเล้วว่า contract ทำงานถูกต้อง ให้ไปเซ็ต metamask ของเราให้ไปต่อกับ test network ของ BSC จากนั้นให้เปลี่ยน environment ที่จะ deploy เป็น `Injected Web3`
 9.  ตัว metamask จะมีการขอ permission ให้เราต่อกับเว็บ remix ซึ่งให้ allow ไป
