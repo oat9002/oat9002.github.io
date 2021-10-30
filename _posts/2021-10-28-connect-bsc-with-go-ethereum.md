@@ -74,7 +74,7 @@ contract MyContract {
 
     > _ป.ล. ให้ก๊อปปี้ contract address เก็บไว้ด้วย_
 
-## สร้าง application ที่จะต่อกับ Smart Contract ที่เรา deploy ไป
+## สร้างโปรแกรมที่จะต่อกับ Smart Contract ที่เรา deploy ไป
 
 1.  สร้างโฟล์เดอร์ ชือ `smart-contract-connect` ไว้ที่ไหนก็ได้
 2.  เข้าไปในโฟล์เดอร์นั้น เเล้วสร้างโฟล์เดอร์ชื่อ `contracts`
