@@ -67,7 +67,7 @@ contract MyContract {
 
     ![remix after deploy](/assets/connect-bsc-with-go-ethereum/remix-after-deploy.png)
 
-7.  ลองทดสอบ contract ของเราโดยลองคลิก increase, decrease หรือ getYourCounter
+7.  ลองทดสอบ contract ของเราโดยลองคลิก `increase`, `decrease` หรือ `getYourCounter`
 8.  เมื่อมันใจเเล้วว่า contract ทำงานถูกต้อง ให้ไปเซ็ต metamask ของเราให้ไปต่อกับ test network ของ BSC จากนั้นให้เปลี่ยน environment ที่จะ deploy เป็น `Injected Web3`
 9.  ตัว metamask จะมีการขอ permission ให้เราต่อกับเว็บ remix ซึ่งให้ allow ไป
 10. ให้ลอง deploy contract เเล้วก็ลองเทส contract ดู
