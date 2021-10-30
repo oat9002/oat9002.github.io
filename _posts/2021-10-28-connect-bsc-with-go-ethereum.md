@@ -12,8 +12,8 @@ categories: tutorial
 
 ## สิ่งที่ต้องมีก่อนที่จะเริ่มทำ
 
--   บน metamask ที่มี BNB บน testnet ของ BSC
-    -   ผมใช้ metamask google chrome extension เป็นตัวจัดการ สามารถไปค้นหาวิธีการสร้าง account เเละการ setup ให้ account ของเราไปต่อกับ test network และการขอ BNB ฟรีเพื่อทำ write ops ใน google ได้
+-   account บน metamask ที่มี BNB บน test network ของ BSC
+    -   สามารถไปค้นหาวิธีการสร้าง account เเละการ setup ให้ account ของเราไปต่อกับ test network และการขอ BNB ฟรีเพื่อทำ write ops ใน google ได้
 -   golang version >= 1.11
 -   docker สำหรับรัน abigen
 
