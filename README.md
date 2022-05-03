@@ -1,2 +1,2 @@
 # oat9002.github.io
-This is my blog
+Welcome to my blog
