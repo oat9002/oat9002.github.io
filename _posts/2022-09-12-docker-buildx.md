@@ -54,7 +54,7 @@ start();
 7. สร้าง `Dockerfile` ตามนี้
 
 ```docker
-FROM node:alpine # เลือก image ที่ support cpu architecture ของเรา (linux/arm/v7 สำหรับ Raspberry Pi 4)
+FROM node:alpine # เลือก image ที่ support cpu ของเรา (linux/arm/v7 สำหรับ Raspberry Pi 4)
 WORKDIR /app
 COPY package.json .
 COPY package-lock.json .
@@ -89,6 +89,6 @@ $ docker buildx build --platform=linux/amd64,linux/arm/v7 -t {your-docker-userna
 
 ![repo-home](/assets/docker-buildx/buildx-home.png)
 
-![repo-tag](/assets/docker-buildx/buildx-tag.png)
+![repo-tag](/assets/docker-buildx/jsbuildx-tag.png)
 
-## ทดลองใน Raspberry Pi 4
+## ทดลองใช้ใน Raspberry Pi 4
