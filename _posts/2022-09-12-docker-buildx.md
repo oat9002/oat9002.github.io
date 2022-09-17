@@ -51,3 +51,15 @@ start();
 ```
 
 7. สร้าง Dockerfile ตามนี้
+
+```docker
+FROM node:alpine
+WORKDIR /app
+COPY package.json .
+COPY package-lock.json .
+COPY server.js .
+EXPOSE 3000
+RUN npm install
+CMD ["node", "server"]
+
+```
