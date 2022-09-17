@@ -87,4 +87,8 @@ $ docker buildx build --platform=linux/amd64,linux/arm/v7 -t {your-docker-userna
 
 4. เมื่อ build เสร็จแล้วให้ลองไปที่เว็บไซต์ docker เพื่อเช็คว่า image มีการ push ไปหรือไม่
 
+![repo-home](/assets/docker-buildx/buildx-home.png)
+
+![repo-tag](/assets/docker-buildx/buildx-tag.png)
+
 ## ทดลองใน Raspberry Pi 4
