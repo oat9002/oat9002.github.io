@@ -11,14 +11,14 @@ title: Build multiplatform docker image
 
 -   Docker account ที่เอาไว้ push image
 -   Docker desktop
--   Raspberry Pi ที่เอาไว้รัน docker image
+-   Raspberry Pi พร้อมลง docker ที่เอาไว้รัน docker image
 -   Node js
 
 ## สร้างโปรเจกต์ทดลอง
 
 เราจะสร้าง API มา 1 ตัวที่จะเอาใช้ทดสอบการรันในครั้งนี้ โดยจะใช้ Node js กับ framework Fastify
 
-1. สร้าง folder ชื่อ docker-buildx แล้วก็ไปที่ folder ที่สร้างไว้
+1. สร้าง folder ชื่อ `buildx-example` แล้วก็ไปที่ folder ที่สร้างไว้
 2. รัน `npm init` เพื่อสร้างโปรเจกต์
 3. รัน `npm install fastify`
 4. สร้างไฟล์ชื่อ `server.js` แล้วใส่โค้ดด้างล่างลงไป
@@ -92,3 +92,15 @@ $ docker buildx build --platform=linux/amd64,linux/arm/v7 -t {your-docker-userna
 ![repo-tag](/assets/docker-buildx/jsbuildx-tag.png)
 
 ## ทดลองใช้ใน Raspberry Pi 4
+
+1. ใน Raspberry Pi ให้รันคำสั่งตามด้านล่าง
+
+```
+$ docker run -p 3000:3000 --name buildx-example -d {your-docker-username}/buildx-example:latest
+```
+
+2. จากนั้นให้ลองใช้ curl ดูเพื่อเช็คว่าได้ผมลัพธ์ตามที่ต้องการหรือไม่
+
+```
+$ curl localhost:3000
+```
