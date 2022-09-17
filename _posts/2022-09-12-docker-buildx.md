@@ -18,9 +18,19 @@ title: Build multiplatform docker image
 
 เราจะสร้าง API มา 1 ตัวที่จะเอาใช้ทดสอบการรันในครั้งนี้ โดยจะใช้ Node js กับ framework Fastify
 
-1. สร้าง folder ชื่อ `buildx-example` แล้วก็ไปที่ folder ที่สร้างไว้
-2. รัน `npm init` เพื่อสร้างโปรเจกต์
-3. รัน `npm install fastify`
+1. สร้างโฟล์เดอร์ชื่อ `buildx-example` แล้วก็ไปที่โฟล์เดอร์ที่สร้างไว้
+2. รันคำสั่งด้านล่างเพื่อสร้างโปรเจกต์
+
+```bash
+$ npm init
+```
+
+3. รันคำสั่งด้านล่างเพื่อลง fastify
+
+```bash
+$ npm install fastify
+```
+
 4. สร้างไฟล์ชื่อ `server.js` แล้วใส่โค้ดด้างล่างลงไป
 
 ```js
@@ -44,11 +54,16 @@ const start = async () => {
 start();
 ```
 
-5. รองรัน API ด้วยคำสั่ง `node server` จะเห็นว่ามันกำลังทำงานที่ port 3000
-6. ลองใช้คำสั่ง `curl localhost:3000` จะได้ผลลัพธ์ตามด้านล่างนี้
+5. รองรัน API ด้วยคำสั่งด้านล่าง จะเห็นว่ามันกำลังทำงานที่ port 3000
 
+```bash
+$ node server
 ```
-{"hello":"world"}
+
+6. ลองใช้คำสั่งด้านล่าง จะได้ผลลัพธ์ดังนี้ `{"hello":"world"}`
+
+```bash
+$ curl localhost:3000
 ```
 
 7. สร้าง `Dockerfile` ตามนี้
@@ -62,12 +77,11 @@ COPY server.js .
 EXPOSE 3000
 RUN npm install
 CMD ["node", "server"]
-
 ```
 
 ## Buildx
 
-1. รันคำสั่งด้านล่างเพื่อที่จะเตรียมพร้อมในการ build linux/arm/v7
+1. รันคำสั่งด้านล่างเพื่อที่จะเตรียมพร้อมในการ build `linux/arm/v7`
 
 ```
 $ docker run --privileged --rm tonistiigi/binfmt --install all
@@ -87,7 +101,11 @@ $ docker buildx build --platform=linux/amd64,linux/arm/v7 -t {your-docker-userna
 
 4. เมื่อ build เสร็จแล้วให้ลองไปที่เว็บไซต์ docker เพื่อเช็คว่า image มีการ push ไปหรือไม่
 
+ตัวอย่าง account ของผม
+
 ![repo-home](/assets/docker-buildx/buildx-home.png)
+
+จะเห็นว่า image อันนี้ support linux/amd64 กับ linux/arm/v7
 
 ![repo-tag](/assets/docker-buildx/buildx-tag.png)
 
@@ -95,12 +113,14 @@ $ docker buildx build --platform=linux/amd64,linux/arm/v7 -t {your-docker-userna
 
 1. ใน Raspberry Pi ให้รันคำสั่งตามด้านล่าง
 
-```
+```bash
 $ docker run -p 3000:3000 --name buildx-example -d {your-docker-username}/buildx-example:latest
 ```
 
 2. จากนั้นให้ลองใช้ curl ดูเพื่อเช็คว่าได้ผมลัพธ์ตามที่ต้องการหรือไม่
 
-```
+```bash
 $ curl localhost:3000
 ```
+
+เป็นยังบ้างครับสำหรับการ build docker image ที่ support หลาย cpu หวังว่าบทความนี้จะมีประโยชน์นะครับ
