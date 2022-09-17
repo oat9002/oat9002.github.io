@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Build multiplatform docker image
+title: Build multi platform docker image
 ---
 
 # こんにちは！
@@ -123,6 +123,8 @@ $ docker run -p 3000:3000 --name buildx-example -d {your-docker-username}/buildx
 $ curl localhost:3000
 ```
 
+## ส่งท้าย
+
 เป็นยังบ้างครับสำหรับการ build docker image ที่ support หลาย cpu หวังว่าบทความนี้จะมีประโยชน์นะครับ
 
-またね！
+# またね！
