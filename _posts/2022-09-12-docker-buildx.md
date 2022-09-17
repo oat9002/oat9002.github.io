@@ -89,7 +89,7 @@ $ docker buildx build --platform=linux/amd64,linux/arm/v7 -t {your-docker-userna
 
 ![repo-home](/assets/docker-buildx/buildx-home.png)
 
-![repo-tag](/assets/docker-buildx/jsbuildx-tag.png)
+![repo-tag](/assets/docker-buildx/buildx-tag.png)
 
 ## ทดลองใช้ใน Raspberry Pi 4
 
