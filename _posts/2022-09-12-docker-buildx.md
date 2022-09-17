@@ -9,7 +9,8 @@ title: Build multiplatform docker image
 
 ## สิ่งที่ต้องใช้
 
--   docker 19.03 ขึ้นไป
+-   Docker account ที่เอาไว้ push image
+-   Docker desktop
 -   Raspberry Pi ที่เอาไว้รัน docker image
 -   Node js
 
@@ -34,7 +35,7 @@ fastify.get("/", async (request, reply) => {
 // Run the server!
 const start = async () => {
     try {
-        await fastify.listen({ port: 3000 });
+        await fastify.listen({ port: 3000, host: "0.0.0.0" });
     } catch (err) {
         fastify.log.error(err);
         process.exit(1);
@@ -50,10 +51,10 @@ start();
 {"hello":"world"}
 ```
 
-7. สร้าง Dockerfile ตามนี้
+7. สร้าง `Dockerfile` ตามนี้
 
 ```docker
-FROM node:alpine
+FROM node:alpine # เลือก image ที่ support cpu architecture ของเรา (linux/arm/v7 สำหรับ Raspberry Pi 4)
 WORKDIR /app
 COPY package.json .
 COPY package-lock.json .
@@ -63,3 +64,27 @@ RUN npm install
 CMD ["node", "server"]
 
 ```
+
+## Buildx
+
+1. รันคำสั่งด้านล่างเพื่อที่จะเตรียมพร้อมในการ build linux/arm/v7
+
+```
+$ docker run --privileged --rm tonistiigi/binfmt --install all
+```
+
+2. สร้างตัว builder ด้วยคำสั่ง
+
+```
+$ docker buildx create --use --name multi-arch-builder
+```
+
+3. build image ด้วยคำสั่ง
+
+```
+$ docker buildx build --platform=linux/amd64,linux/arm/v7 -t {your-docker-username}/buildx-example:latest --push .
+```
+
+4. เมื่อ build เสร็จแล้วให้ลองไปที่เว็บไซต์ docker เพื่อเช็คว่า image มีการ push ไปหรือไม่
+
+## ทดลองใน Raspberry Pi 4
