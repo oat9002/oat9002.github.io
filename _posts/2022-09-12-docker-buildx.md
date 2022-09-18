@@ -5,14 +5,14 @@ title: Build multi platform docker image
 
 # こんにちは！
 
-ที่มาของ blog นี้เนื่องมาจากผมได้ซื้อ Raspberry Pi 4 มาใช้เพื่อรันแอปบางตัวที่ผมทำขึ้นมา แต่ด้วยว่า docker image ที่ผมมีอยู่นั้นไม่สามารถรันบน Raspberry Pi ได้เพราะมันใช้ cpu คนละสถาปัตยกรรมกัน (Raspberry Pi เป็น arm) ผมได้ไปเจอว่า docker มีคำสั่ง buildx ที่เอาไว้ใช้ build multiplatform architecture ซึ่งบทความนี้เราจะมาลองสร้าง image ที่เอาไว้รันได้ทั้งบนคอมทั่วไปกับ Raspberry Pi กัน
+ที่มาของ blog นี้เนื่องมาจากผมได้ซื้อ Raspberry Pi 4 มาใช้เพื่อรันแอปบางตัวที่ผมทำขึ้นมา แต่ด้วยว่า docker image ที่ผมมีอยู่นั้นไม่สามารถรันบน Raspberry Pi ได้เพราะมันใช้ cpu คนละสถาปัตยกรรมกัน (Raspberry Pi เป็น arm) ผมได้ไปเจอว่า docker มีคำสั่ง buildx ที่เอาไว้ใช้ build multi platform image โดยบทความนี้เราจะมาลองสร้าง image ที่เอาไว้รันได้ทั้งบนคอมทั่วไปกับ Raspberry Pi กัน
 
 ## สิ่งที่ต้องใช้
 
 -   Docker account ที่เอาไว้ push image
--   Docker desktop
+-   Docker พร้ออม buildx cli (ถ้าลง Docker desktop น่าจะมีลงไว้ให้อยู่อยู่เเล้ว)
 -   Raspberry Pi พร้อมลง docker ที่เอาไว้รัน docker image
--   Node js
+-   Node js สำหรับทำโปรเจกต์ทดลอง
 
 ## สร้างโปรเจกต์ทดลอง
 
@@ -105,7 +105,7 @@ $ docker buildx build --platform=linux/amd64,linux/arm/v7 -t {your-docker-userna
 
 ![repo-home](/assets/docker-buildx/buildx-home.png)
 
-จะเห็นว่า image อันนี้ support linux/amd64 กับ linux/arm/v7
+จะเห็นว่า image อันนี้ support **linux/amd64** กับ **linux/arm/v7**
 
 ![repo-tag](/assets/docker-buildx/buildx-tag.png)
 
@@ -125,6 +125,11 @@ $ curl localhost:3000
 
 ## ส่งท้าย
 
-เป็นยังบ้างครับสำหรับการ build docker image ที่ support หลาย cpu หวังว่าบทความนี้จะมีประโยชน์นะครับ
+เป็นยังไงบ้างครับสำหรับการ build docker image ที่ support หลาย cpu นอกจากลองรันที่ตัว Raspberry Pi แล้วสามารถ pull มาลองที่เครื่องตัวเองได้ด้วยนะครับ หวังว่าบทความนี้จะมีประโยชน์นะครับ
+
+#### References
+
+-   [Docker buildx document](https://docs.docker.com/build/building/multi-platform/)
+-   [Fastify Getting Started](https://www.fastify.io/docs/latest/Guides/Getting-Started/)
 
 # またね！
