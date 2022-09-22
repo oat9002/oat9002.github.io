@@ -95,31 +95,9 @@ title: Build multi platform docker image
 
 3. build image ด้วยคำสั่ง
 
-    ````bash
-    $ docker buildx build --platform=linux/amd64,linux/arm/v7 -t {your-docker-username}/buildx-example:latest --push .
-
-    ```js
-    // Require the framework and instantiate it
-    const fastify = require("fastify")({ logger: true });
-
-    // Declare a route
-    fastify.get("/", async (request, reply) => {
-        return { hello: "world" };
-    });
-
-    // Run the server!
-    const start = async () => {
-        try {
-            await fastify.listen({ port: 3000, host: "0.0.0.0" });
-        } catch (err) {
-            fastify.log.error(err);
-            process.exit(1);
-        }
-    };
-    start();
-    ``` ```
-
-    ````
+    ```bash
+    $ docker buildx build --platform=linux/amd64,linux/arm/v7 -t {your-docker-username}/buildx-example:latest --push . 
+    ```
 
 4. เมื่อ build เสร็จแล้วให้ลองไปที่เว็บไซต์ docker เพื่อเช็คว่า image มีการ push ไปหรือไม่
 
