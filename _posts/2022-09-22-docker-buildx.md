@@ -105,7 +105,7 @@ _ตัวอย่าง account ของผม_
 
 ![repo-home](/assets/docker-buildx/buildx-home.png)
 
-จะเห็นว่า image อันนี้ support **linux/amd64** กับ **linux/arm/v7**
+_จะเห็นว่า image อันนี้ support **linux/amd64** กับ **linux/arm/v7**_
 
 ![repo-tag](/assets/docker-buildx/buildx-tag.png)
 
