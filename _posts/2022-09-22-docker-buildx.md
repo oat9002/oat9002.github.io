@@ -10,7 +10,7 @@ title: Build multi platform docker image
 ## สิ่งที่ต้องใช้
 
 -   Docker account ที่เอาไว้ push image
--   Docker พร้ออม **buildx cli** (ถ้าลง Docker desktop น่าจะมีลงไว้ให้อยู่อยู่เเล้ว)
+-   Docker พร้ออม **buildx cli** (ถ้าลง Docker desktop น่าจะมีลงไว้ให้อยู่เเล้ว)
 -   Raspberry Pi พร้อมลง docker ที่เอาไว้รัน docker image
 -   Node js สำหรับทำโปรเจกต์ทดลอง
 
