@@ -4,17 +4,25 @@ layout: default
 
 <div class="home">
     <h1 class="page-heading">{{ site.title }}</h1>
-    <a href="https://webring.wonderful.software#blog.oatto.dev" title="วงแหวนเว็บ">
-        <img alt="วงแหวนเว็บ" width="32" class="webring-icon" height="32"
-            src="https://webring.wonderful.software/webring.black.svg" />
+    <a
+        href="https://webring.wonderful.software#blog.oatto.dev"
+        title="วงแหวนเว็บ"
+    >
+        <img
+            alt="วงแหวนเว็บ"
+            width="32"
+            class="webring-icon"
+            height="32"
+            src="https://webring.wonderful.software/webring.black.svg"
+        />
     </a>
 
     <ul class="post-list">
         {% for post in site.posts %}
         <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %y" }}</span>
             <a
-                style="display: inline; margin-left: 5px; font-size: 1.4em;"
+                style="display: inline; margin-left: 5px; font-size: 1.4em"
                 class="post-link"
                 href="{{ post.url | prepend: site.baseurl }}"
                 >{{ post.title }}</a
