@@ -33,6 +33,7 @@
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
+        z-index: 1;
 
         .menu-icon {
             display: block;
@@ -114,8 +115,21 @@
     display: inline;
 }
 
+/* Extra heading
+ * ============================================== */
+
 .webring-icon {
     margin-bottom: 12px;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+.buy-me-coffee {
+    font-size: 14px;
+    padding-top: 18px;
+    color: #454545;
 }
 
 /* Archive
