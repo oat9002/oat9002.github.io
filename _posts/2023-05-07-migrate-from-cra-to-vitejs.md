@@ -99,7 +99,7 @@ title: Migrate from CRA to Vite.js
 
 7. แก้โค้ดที่เรียกใช้ environment variable จาก `process.evn.REACT_....` เป็น `import.meta.evn.VITE_...`
 
-8. จากนั้นลอง start web app ด้วย `yarn start` ถ้า web app start ได้ปกตืก็เป็นอันเสร็จเรียบร่อย
+8. จากนั้นลอง start web app ด้วย `yarn start` ถ้า web app start ได้ปกตืก็เป็นอันเสร็จเรียบร้อย
 
 **_ตัวอย่าง commit ของการ migrate_** _[Click Here](https://github.com/oat9002/GoldPriceTracking/commit/c91413e23e99e6ce573f56dffc1c695a6c398901)_
 
