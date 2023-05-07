@@ -83,7 +83,7 @@ title: Migrate from CRA to Vite.js
 
 5. แก้ evnvironment variable prefix จาก `REACT_APP` เป็น `VITE`
 
-6. สร้างไฟลฺ์ `evn.d.ts` ใว้ในโฟล์เดอรฺ์ `src` ให้สร้าง property ตามที่ environment variable ของเรา
+6. สร้างไฟลฺ์ `evn.d.ts` ใว้ในโฟล์เดอรฺ์ `src` ให้สร้าง property ตาม environment variable ของเรา
 
     ```typescript
     interface ImportMetaEnv {
