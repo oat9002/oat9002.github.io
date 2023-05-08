@@ -9,7 +9,7 @@ title: Migrate from CRA to Vite.js
 
 # มาเริ่มกันเลย !
 
-เมื่อไม่นานมานี้ในเว็บ react official ได้เอา **CRA (Create React App)** ออกจากเว็บไซต์ ซึ่งมันก็เป็นสัญญาณบ่งบอกได้ว่าให้ย้ายออกไปใช้ตัวอื่นแทนได้แล้วนะ หลังจากนั้นผมก็ลอง ๆ ไปหาดูว่าควรจะเปลี่ยนไปใช้อะไรดั แล้วก็ได้ไปเจอตัวนี้ซึ่งก็คือ **Vite.js** เหมือนแต่เดิมเค้าทำให้ Vue.js แต่ตอนนี้เค้าก็ support React แล้วก็เลยตัดสินใจลองเปลี่ยนมาใช้ตัวนี้ดู ซึ่งสำหรับผมการ migrate นี้ทำได้ค่อนข้างง่าย ไม่ยุ่งยากเหมือนที่ผมเคยคิดไว้
+เมื่อไม่นานมานี้ในเว็บ react official ได้เอา **CRA (Create React App)** ออกจากเว็บไซต์ ซึ่งมันก็เป็นสัญญาณบ่งบอกได้ว่าให้ย้ายออกไปใช้ตัวอื่นแทนได้แล้วนะ หลังจากนั้นผมก็ลอง ๆ ไปหาดูว่าควรจะเปลี่ยนไปใช้อะไรดั แล้วก็ได้ไปเจอตัวนี้ซึ่งก็คือ **[Vite.js](https://vitejs.dev/)** เหมือนแต่เดิมเค้าทำให้ Vue.js แต่ตอนนี้เค้าก็ support React แล้วก็เลยตัดสินใจลองเปลี่ยนมาใช้ตัวนี้ดู ซึ่งสำหรับผมการ migrate นี้ทำได้ค่อนข้างง่าย ไม่ยุ่งยากเหมือนที่ผมเคยคิดไว้
 
 ปล. ตัวอย่างในที่นี้จะใช้ Typescript นะครับ
 
@@ -85,9 +85,25 @@ title: Migrate from CRA to Vite.js
     });
     ```
 
-5. แก้ evnvironment variable prefix จาก `REACT_APP` เป็น `VITE`
+5. ย้ายไฟล์ `index.html` ที่อยู่ในโฟล์เดอร์ `public` ออกมาไว้ที่ root แล้วข้างในไฟล์ให้ลบ `%PUBLIC_URL%` ออก แล้วก็ใน `<body>` ให้เพิ่ม `<script type="module" src="/src/index.tsx"></script>` ไว้บรรทัดด้านล่าง `<div id="root"></div>` ก็จะได้ประมาณนี้
 
-6. สร้างไฟลฺ์ `evn.d.ts` ใว้ในโฟล์เดอรฺ์ `src` แล้วให้สร้าง interface ตามนี้ที่มี property ตาม environment variable ของเรา
+    ```html
+    <body>
+        <noscript> You need to enable JavaScript to run this app. </noscript>
+        <div id="root"></div>
+        <script type="module" src="/src/index.tsx"></script>
+        <!--
+        This HTML file is a template.
+        If you open it directly in the browser, you will see an empty page.
+        To begin the development, run `npm start` or `yarn start`.
+        To create a production bundle, use `npm run build` or `yarn build`.
+        -->
+    </body>
+    ```
+
+6. แก้ evnvironment variable prefix จาก `REACT_APP` เป็น `VITE`
+
+7. สร้างไฟลฺ์ `evn.d.ts` ใว้ในโฟล์เดอรฺ์ `src` แล้วให้สร้าง interface ตามนี้ที่มี property ตาม environment variable ของเรา
 
     ```typescript
     interface ImportMetaEnv {
@@ -101,9 +117,9 @@ title: Migrate from CRA to Vite.js
     }
     ```
 
-7. แก้โค้ดที่เรียกใช้ environment variable จาก `process.evn.REACT_....` เป็น `import.meta.evn.VITE_...`
+8. แก้โค้ดที่เรียกใช้ environment variable จาก `process.evn.REACT_....` เป็น `import.meta.evn.VITE_...`
 
-8. จากนั้นลองสตาร์ท web app ด้วย `yarn start` ถ้า web app สตาร์ทได้ปกติก็เป็นอันเสร็จเรียบร้อย
+9. จากนั้นลองสตาร์ท web app ด้วย `yarn start` ถ้า web app สตาร์ทได้ปกติก็เป็นอันเสร็จเรียบร้อย
 
 **_ตัวอย่าง commit ของการ migrate_** _[Click Here](https://github.com/oat9002/GoldPriceTracking/commit/c91413e23e99e6ce573f56dffc1c695a6c398901)_
 
