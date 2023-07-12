@@ -59,6 +59,8 @@ object Main extends App {
 case class Data(content: String)
 ```
 
+จนถึงขั้นตอนนี้เราก็มีโค้ดที่เตรียมพร้อมสำหรับใช้ใน github actions 
+
 ## เข้าสู่ github actions
 
 - ในการที่เราจะใช้ github action นั้น เราต้องสร้างโฟล์เดอร์ `.github` ไว้ที่ root โฟล์เดอร์แล้วก็ข้างในให้สร้างโฟล์เดอร์ `workflows`
