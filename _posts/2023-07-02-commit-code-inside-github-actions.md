@@ -67,47 +67,47 @@ case class Data(content: String)
 
 - จากนี้นให้สร้างไฟล์ `pr_build.yml` แล้วใส่โค้ดตามนี้
 
-```yml
-name: pr_build
+  {% raw %}
+  ```yml
+  name: pr_build
 
-on:
-  pull_request:
-    branches: [ main ]
+  on:
+    pull_request:
+      branches: [ main ]
 
-jobs:
-  formatCode:
-    runs-on: ubuntu-latest
-    if: ${{ !contains(github.actor, 'github-actions[bot]') }}
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        ref: ${{ github.head_ref }}
-        token: ${{ secrets.ACTION_TOKEN }}
-    - name: Set up JDK 16
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '16'
-    - name: Set Git Username
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-    - name: Format code
-      run: |
-        sbt scalafmtAll
-    - name: Check for changes
-      run: |
-        if git diff-index --quiet HEAD; then
-          echo "IS_CHANGED=false" >> $GITHUB_ENV
-        else
-          echo "IS_CHANGED=true" >> $GITHUB_ENV
-        fi
-    - name: Push code if format is needed
-      if: ${{ env.IS_CHANGED == 'true' }}
-      run: |
-        git add --all
-        git commit -m ":recycle: format code"
-        git push origin ${{ github.head_ref }}
-```
-
-
+  jobs:
+    formatCode:
+      runs-on: ubuntu-latest
+      if: ${{ !contains(github.actor, 'github-actions[bot]') }}
+      steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.ACTION_TOKEN }}
+      - name: Set up JDK 16
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '16'
+      - name: Set Git Username
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Format code
+        run: |
+          sbt scalafmtAll
+      - name: Check for changes
+        run: |
+          if git diff-index --quiet HEAD; then
+            echo "IS_CHANGED=false" >> $GITHUB_ENV
+          else
+            echo "IS_CHANGED=true" >> $GITHUB_ENV
+          fi
+      - name: Push code if format is needed
+        if: ${{ env.IS_CHANGED == 'true' }}
+        run: |
+          git add --all
+          git commit -m ":recycle: format code"
+          git push origin ${{ github.head_ref }}
+  ```
+{% endraw %}
