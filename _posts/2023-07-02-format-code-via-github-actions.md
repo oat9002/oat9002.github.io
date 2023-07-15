@@ -12,7 +12,7 @@ title: Format code via GitHub Actions
 
 ตัวอย่างในบทความนี้จะใช้ scala3 โดยใช้ library scalafmt ในการ format code ส่วน IDE จะเป็น IntelliJ Idea CE
 
-## โปรแกรมที่ต้องใช้
+## สิ่งที่ต้องเตรียม
 
 1. [IntelliJ Idea CE](https://www.jetbrains.com/idea/download/)
 2. [java](https://adoptium.net/temurin/releases/)
