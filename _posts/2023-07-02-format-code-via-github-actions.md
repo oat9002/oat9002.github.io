@@ -77,6 +77,8 @@ title: Format code via GitHub Actions
   case class Data(content: String)
   ```
 
+- จากนั้นให้แก้ไฟล์ให้ไปอยู่ในรูปแบบเดิมก่อนที่จะถูก format
+
 - ในการที่เราจะใช้ github actions นั้น เราต้องสร้างโฟล์เดอร์ `.github` ไว้ที่ root โฟล์เดอร์แล้วก็ข้างในให้สร้างโฟล์เดอร์ `workflows`
 
   <p>
