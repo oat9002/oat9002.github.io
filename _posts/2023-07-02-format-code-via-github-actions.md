@@ -10,7 +10,7 @@ title: Format code via GitHub Actions
 
 บทความในวันนี้จะเป็นเรื่องของ github actions ครับ ถ้าเพื่อน ๆ ได้ใช้ github เป็นที่เก็บโค้ดก็น่าจะเคยได้ยินบริการตัวนี้จาก github มาบ้าง github actions เป็นบริการสำหรับการทำ CI/CD pipeline ข้อดีของมันคือเราสารถใช้ได้ฟรีได้ประมาณนึง แล้วก็เราไม่จำเป็นต้องลงอะไรให้วุ่นวาย ให้ github เป็นคนจัดการให้ทั้งหมด ซึ่งในบทความนี้จะแชร์เรื่องว่าถ้าเราอยากจะ format code ให้อัตโนมัติในทุก ๆ pull request โดยอัตโนมัติ เพื่อที่ให้โค้ดของเรามีการ indent ตาม config ของเราอยู่เสมอ 
 
-ตัวอย่างในบทความนี้จะใช้ scala3 แล้วก็ใช้ library scalafmt ในการ format code IDE จะเป็น IntelliJ Idea CE 2023.1.3
+ตัวอย่างในบทความนี้จะใช้ scala3 โดยใช้ library scalafmt ในการ format code ส่วน IDE จะเป็น IntelliJ Idea CE
 
 ## โปรแกรมที่ต้องใช้
 
