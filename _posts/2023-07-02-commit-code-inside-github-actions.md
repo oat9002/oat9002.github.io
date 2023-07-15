@@ -38,6 +38,14 @@ title: Commit code inside Github Actions
   addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.4.6")
   ```
 
+- สร้างไฟล์ `.scalafmt.conf` ไว้ที่ root โฟล์เดอรื ใส่ config ตามนี้
+
+  ```
+  version = 3.5.9
+  runner.dialect = scala3
+  maxColumn = 100
+  ```
+
 - จากนั้นให้ลองเทสโดยการแก้ format โค้ดใน `Main.scala` ตามนี้
 
   ```scala
@@ -87,7 +95,6 @@ title: Commit code inside Github Actions
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-          token: ${{ secrets.ACTION_TOKEN }}
       - name: Set up JDK 20
         uses: actions/setup-java@v3
         with:
@@ -112,8 +119,82 @@ title: Commit code inside Github Actions
         run: |
           git add --all
           git commit -m ":recycle: format code"
-          git push origin ${{ github.head_ref }}
+          git push origin
   ```
 {% endraw %}
 
-จนถึงขั้นตอนนี้เราก็มีโค้ดที่เตรียมพร้อมสำหรับใช้ใน github actions 
+จนถึงขั้นตอนนี้เราก็มีโค้ดที่เตรียมพร้อมสำหรับใช้ใน github actions
+
+## สร้างโปรเจกต์บน github 
+
+- สร้างโปรเจกต์ชื่อว่า `scalafmt-test` แล้วก็ให้เพิ่ม `README.md` ไฟล์ไปด้วยเลย
+
+- จากนั้นไปที่ `Settings` แล้วเลือไปที่ `Actions -> General`
+
+  <p>
+    <img src="/assets/commit-code-inside-github-actions/github-setting-1.png" />
+  </p>
+
+-  อนุญาติ permission ให้ `GITHUB_TOKEN` สามารถ write ไปยัง reporisitory ของเราได้
+
+  <p>
+    <img src="/assets/commit-code-inside-github-actions/github-setting-2.png" />
+  </p>
+
+- จากนั้นกลับมาที่โค้ดของเรา ให้เชื่อมโค้ดเราให้เข้ากับ repo ที่เราสร้างขึ้น จากนั้นนให้สร้าง branch ชื่อว่า `feature/github-actions`
+
+- แล้วก็ให้ push code ของเราขึ้น github ไป 
+
+  *ถ้าเห็นว่าไฟล์ที่จะ push ขึ้นมีเยอะผิดปกติ ให้เพื่มไฟล์ `.gitignore` ตามด้านล่างนี้*
+
+    ```
+    .DS_Store
+    *.class
+    *.log
+    *~
+
+    # sbt specific
+    dist/*
+    target/
+    lib_managed/
+    src_managed/
+    project/boot/
+    project/plugins/project/
+    project/local-plugins.sbt
+    .history
+    .bsp
+
+    # Scala-IDE specific
+    .scala_dependencies
+    .cache
+    .classpath
+    .project
+    .settings
+    classes/
+
+    # idea
+    .idea
+    .idea_modules
+    /.worksheet/
+
+    # Dotty-IDE
+    .dotty-ide-artifact
+    .dotty-ide.json
+
+    # Visual Studio Code
+    .vscode
+
+    .env
+    src/main/resources/application.local.conf
+    ```
+
+- จากนั้นไปที่เว็บ github ของเรา ให้ไปสร้าง pull request เป็นชื่ออะไรก็ได้ แล้วก็รอดูผลลัพธ์ 
+
+  จะเห็นได้ว่าถ้าตัว github actions รันเสร็จแล้ว มันจะมี commit ให้เพิ่มขึ้นมา เป็นว่าเสร็จเรียบร้อย
+
+  <p>
+    <img src="/assets/commit-code-inside-github-actions/result.png" />
+  </p>
+
+
+จากนี้ทุก pull request ที่มีการสร้างขึ้นมาก็จะถูก format ตาม config ของเราตลอดเวลา
