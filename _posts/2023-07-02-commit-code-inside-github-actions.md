@@ -90,7 +90,7 @@ title: Commit code inside Github Actions
   jobs:
     formatCode:
       runs-on: ubuntu-latest
-      if: ${{ !contains(github.actor, 'github-actions[bot]') }}
+      if: ${{ !contains(github.actor, 'github-actions[bot]') }} # เพื่อไม่ให้ commit ของ bot มารัน job ตัวนี้อีก
       steps:
       - uses: actions/checkout@v3
         with:
