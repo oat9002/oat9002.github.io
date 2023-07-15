@@ -8,13 +8,16 @@ title: Commit code inside GitHub Actions
 
 # Hi
 
-สวัสดีครับ บทความในวันนี้จะเป็นเรื่องของ github actions ครับ ถ้าเพื่อยได้ใช้ github เป็นที่เก็บโค้ดก็น่าจะเคยได้ยินบริการตัวนี้จาก github มาบ้าง github actions เป็นบริการสำหรัยการทำ CI/CD pipeline ข้อดีของมันคือเราสารถใช้ได้ฟรีได้ระดับนึง ถ้าโปรเจกต์ของเราเป็นแค่งานอดิเรก free tier น่าจะครอบคลุมได้ทั้งหมด ซึ่งในบทความนี้จะแชร์เรื่องว่าถ้าเราอยากจะ format code ให้อัตโนมัติ เพื่อที่ให้โค้ดจองเราทีการ indent ตาม config ของเราอยู่เสมอ ตัวอย่างในบทความนี้จะใช้ scala3 แล้วก็ใช้ library scalafmt ในการ format code IDE จะเป็น IntelliJ Idea CE 2023.1.3
+บทความในวันนี้จะเป็นเรื่องของ github actions ครับ ถ้าเพื่อน ๆ ได้ใช้ github เป็นที่เก็บโค้ดก็น่าจะเคยได้ยินบริการตัวนี้จาก github มาบ้าง github actions เป็นบริการสำหรับการทำ CI/CD pipeline ข้อดีของมันคือเราสารถใช้ได้ฟรี ถ้าโปรเจกต์ของเราเป็นแค่งานอดิเรก free tier น่าจะครอบคลุมได้ทั้งหมด แล้วก็เราไม่จำเป็นต้องลงอะไรให้วุ่นวาย ให้ github เป็นคนจัดการให้ทั้งหมด ซึ่งในบทความนี้จะแชร์เรื่องว่าถ้าเราอยากจะ format code ให้อัตโนมัติในทุก ๆ pull request โดยอัตโนมัติ เพื่อที่ให้โค้ดของเรามีการ indent ตาม config ของเราอยู่เสมอ 
+
+ตัวอย่างในบทความนี้จะใช้ scala3 แล้วก็ใช้ library scalafmt ในการ format code IDE จะเป็น IntelliJ Idea CE 2023.1.3
 
 ## โปรแกรมที่ต้องใช้
 
 1. [IntelliJ Idea CE](https://www.jetbrains.com/idea/download/)
 2. [java](https://adoptium.net/temurin/releases/)
 3. [sbt](https://www.scala-sbt.org/download.html)
+4. บัญชี github
 
 ## เตรียมโค้ดที่ใช้ทดสอบ
 
@@ -41,7 +44,7 @@ title: Commit code inside GitHub Actions
   addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.4.6")
   ```
 
-- สร้างไฟล์ `.scalafmt.conf` ไว้ที่ root โฟล์เดอรื ใส่ config ตามนี้
+- สร้างไฟล์ `.scalafmt.conf` ไว้ที่ root โฟล์เดอร์ ใส่ config ตามนี้
 
   ```
   version = 3.5.9
@@ -126,13 +129,13 @@ title: Commit code inside GitHub Actions
   ```
 {% endraw %}
 
-จนถึงขั้นตอนนี้เราก็มีโค้ดที่เตรียมพร้อมสำหรับใช้ใน github actions
+จนถึงขั้นตอนนี้เราก็มีโค้ดที่เตรียมพร้อมสำหรับที่จะใช้ใน github actions แล้ว
 
 ## สร้างโปรเจกต์บน github 
 
-- สร้างโปรเจกต์ชื่อว่า `scalafmt-test` แล้วก็ให้เพิ่ม `README.md` ไฟล์ไปด้วยเลย
+- ไปที่เว็บ github ล็อคอินบัญชีของเรา แล้วสร้างโปรเจกต์ชื่อว่า `scalafmt-test` แล้วก็ให้เพิ่ม `README.md` ไฟล์ไปด้วยเลย
 
-- จากนั้นไปที่ `Settings` แล้วเลือไปที่ `Actions -> General`
+- จากนั้นไปที่ `Settings` แล้วเลือกไปที่ `Actions -> General`
 
   <p>
     <img src="/assets/commit-code-inside-github-actions/github-setting-1.png" />
@@ -144,11 +147,11 @@ title: Commit code inside GitHub Actions
     <img src="/assets/commit-code-inside-github-actions/github-setting-2.png" />
   </p>
 
-- จากนั้นกลับมาที่โค้ดของเรา ให้เชื่อมโค้ดเราให้เข้ากับ repo ที่เราสร้างขึ้น จากนั้นนให้สร้าง branch ชื่อว่า `feature/github-actions`
+- จากนั้นกลับมาที่โค้ดของเรา ให้เชื่อมโค้ดเราเข้ากับ repo ที่เราสร้างขึ้น จากนั้นให้สร้าง branch ที่ชื่อว่า `feature/github-actions`
 
-- แล้วก็ให้ push code ของเราขึ้น github ไป 
+- แล้วก็ให้ push โค้ดของเราขึ้น github ไป 
 
-  *ถ้าเห็นว่าไฟล์ที่จะ push ขึ้นมีเยอะผิดปกติ ให้เพื่มไฟล์ `.gitignore` ตามด้านล่างนี้*
+  *ถ้าเห็นว่าไฟล์ที่จะ push ขึ้นไปมีเยอะผิดปกติ ให้เพื่มไฟล์ `.gitignore` ไว้ที่ root  แล้วใส่ชื่อไฟล์ตามด้านล่างนี้*
 
     ```
     .DS_Store
@@ -193,11 +196,11 @@ title: Commit code inside GitHub Actions
 
 - จากนั้นไปที่เว็บ github ของเรา ให้ไปสร้าง pull request เป็นชื่ออะไรก็ได้ แล้วก็รอดูผลลัพธ์ 
 
-  จะเห็นได้ว่าถ้าตัว github actions รันเสร็จแล้ว มันจะมี commit ให้เพิ่มขึ้นมา เป็นว่าเสร็จเรียบร้อย
+  จะเห็นได้ว่าถ้าตัว github actions รันเสร็จแล้ว มันจะมี commit ให้เพิ่มขึ้นมา เป็นอันว่าเสร็จเรียบร้อย
 
   <p>
     <img src="/assets/commit-code-inside-github-actions/result.png" />
   </p>
 
 
-จากนี้ทุก pull request ที่มีการสร้างขึ้นมาก็จะถูก format ตาม config ของเราตลอดเวลา
+จากนี้ทุก ๆ pull request ที่มีการสร้างขึ้นมาก็จะถูก format ตาม config ของเราตลอดเวลา
