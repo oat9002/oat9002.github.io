@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Commit code inside GitHub Actions
+title: Format code via GitHub Actions
 ---
 <p>
-  <img src="/assets/commit-code-inside-github-actions/cover.png" alt="initialize project" />
+  <img src="/assets/format-code-via-github-actions/cover.png" alt="initialize project" />
 </p>
 
 # Hi
@@ -24,7 +24,7 @@ title: Commit code inside GitHub Actions
 - เปิดโปรแกรม IntelliJ Idea แล้วสร้างโปรเจกต์ตามนี้
 
   <p>
-      <img src="/assets/commit-code-inside-github-actions/intialize-project.png" alt="initialize project" />
+      <img src="/assets/format-code-via-github-actions/intialize-project.png" alt="initialize project" />
   </p>
 
 - สร้างไฟล์ `Main.scala` ไว้ในโฟล์เดอร์ `src` แล้วพิมพ์โค้ดตามนี้
@@ -80,7 +80,7 @@ title: Commit code inside GitHub Actions
 - ในการที่เราจะใช้ github actions นั้น เราต้องสร้างโฟล์เดอร์ `.github` ไว้ที่ root โฟล์เดอร์แล้วก็ข้างในให้สร้างโฟล์เดอร์ `workflows`
 
   <p>
-    <img src="/assets/commit-code-inside-github-actions/workflow-folder.png" alt="workflow folder" />
+    <img src="/assets/format-code-via-github-actions/workflow-folder.png" alt="workflow folder" />
   </p>
 
 - จากนี้นให้สร้างไฟล์ `pr_build.yml` ไว้ในโฟล์เดอร์ `workflows` แล้วใส่โค้ดตามนี้
@@ -138,13 +138,13 @@ title: Commit code inside GitHub Actions
 - จากนั้นไปที่ `Settings` แล้วเลือกไปที่ `Actions -> General`
 
   <p>
-    <img src="/assets/commit-code-inside-github-actions/github-setting-1.png" />
+    <img src="/assets/format-code-via-github-actions/github-setting-1.png" />
   </p>
 
 -  อนุญาติ permission ให้ `GITHUB_TOKEN` สามารถ write ไปยัง reporisitory ของเราได้
 
   <p>
-    <img src="/assets/commit-code-inside-github-actions/github-setting-2.png" />
+    <img src="/assets/format-code-via-github-actions/github-setting-2.png" />
   </p>
 
 - จากนั้นกลับมาที่โค้ดของเรา ให้เชื่อมโค้ดเราเข้ากับ repo ที่เราสร้างขึ้น จากนั้นให้สร้าง branch ที่ชื่อว่า `feature/github-actions`
@@ -199,7 +199,7 @@ title: Commit code inside GitHub Actions
   จะเห็นได้ว่าถ้าตัว github actions รันเสร็จแล้ว มันจะมี commit ให้เพิ่มขึ้นมา เป็นอันว่าเสร็จเรียบร้อย
 
   <p>
-    <img src="/assets/commit-code-inside-github-actions/result.png" />
+    <img src="/assets/format-code-via-github-actions/result.png" />
   </p>
 
 
