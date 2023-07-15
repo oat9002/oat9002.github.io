@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Commit code inside Github Actions
+title: Commit code inside GitHub Actions
 ---
 <p>
   <img src="/assets/commit-code-inside-github-actions/cover.png" alt="initialize project" />
