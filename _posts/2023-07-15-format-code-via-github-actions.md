@@ -198,7 +198,7 @@ title: Format code via GitHub Actions
 
 - จากนั้นไปที่เว็บ github ของเรา ให้ไปสร้าง pull request เป็นชื่ออะไรก็ได้ แล้วก็รอดูผลลัพธ์ 
 
-  จะเห็นได้ว่าถ้าตัว github actions รันเสร็จแล้ว มันจะมี commit ให้เพิ่มขึ้นมา เป็นอันว่าเสร็จเรียบร้อย
+  *จะเห็นได้ว่าถ้าตัว github actions รันเสร็จแล้ว มันจะมี commit ให้เพิ่มขึ้นมา เป็นอันว่าเสร็จเรียบร้อย*
 
   <p>
     <img src="/assets/format-code-via-github-actions/result.png" />
