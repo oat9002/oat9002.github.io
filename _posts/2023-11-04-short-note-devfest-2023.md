@@ -5,7 +5,7 @@ title: "Short note from DevFest Bangkok 2023"
 
 ## Hi
 
-Welcome back to my blog. For this topic, I want to write in English so please bare with me a bit lol. Today, I have a chance to join developer event called **Devfest Bangkok 2023** which is set up by GDG Bangkok. This is my very first time join to this event. Let's see what we have.
+Welcome back to my blog. For this topic, I want to write in English so please bare with me a bit lol. Today, I have a chance to join developer event called **Devfest Bangkok 2023** which is set up by GDG Bangkok. This is my very first time join to this event. By the way, because I don't really use Flutter or create application. So in some session which relates to that I don't really much play attention to it lol. Let's see what we have.
 
 ## Sessions
 
@@ -16,7 +16,10 @@ There are 10 sessions
 3. Firestore Advanced Queries
 4. Build a generative AI chatbot with PaLM API and Cloud Functions for Firebase 2nd Gen
 5. Ship faster with Feature Flags
-6. Managing a component librarby in Fluttervg
+6. Managing a component librarby in Flutter
+7. Make for Large, Make for Fold with Flutter
+8. Diversity in AI
+9. Test Strategy for Kotlin Multiplatform Apps
 
 ## Conclusion
 
