@@ -21,6 +21,14 @@ There are 10 sessions
 8. Diversity in AI
 9. Test Strategy for Kotlin Multiplatform Apps
 
-## Conclusion
+## View transition API the next generation of web transition
 
-[Add your conclusion here]
+- Pain point for web developer is transition between page in web
+- Not as smooth as mobile app
+- There are some restricition
+  - Only support SPA
+  - Safariy has not been supported yet T_T
+
+## Better UX on the Web with Core Web Vital
+
+- UX -> Look, Feel, **Usability**
