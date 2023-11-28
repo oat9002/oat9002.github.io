@@ -16,7 +16,7 @@ There are 10 sessions
 3. Firestore Advanced Queries
 4. Build a generative AI chatbot with PaLM API and Cloud Functions for Firebase 2nd Gen
 5. Ship faster with Feature Flags
-6. Managing a component librarby in Flutter
+6. Managing design system in Flutter
 7. Make for Large, Make for Fold with Flutter
 8. Diversity in AI
 9. Test Strategy for Kotlin Multiplatform Apps
@@ -32,3 +32,68 @@ There are 10 sessions
 ## Better UX on the Web with Core Web Vital
 
 - UX -> Look, Feel, **Usability**
+- Loading Performance, Visual Stability, Input Responsiveness
+  - LCP <= 2.5 s
+  - CLS <= 0.1 s
+  - FID <= 100 ms
+  - INP <= 200 ms
+- We can use Web Vital chrome extension to check these things
+  - page speed inside
+  - chrome ux report
+  - unlighthouse
+- Ensure LCP has prioritize in resource
+- Use CDN to optimize doc and resource TTFB
+- Ensure web is eligible for bfcache
+- Avoid animation/transition which uses css-induction
+- Avoid or break up long task
+- Void unnecessary javascripot
+- Avoid large rendering update
+
+## Firestore Advanced Quries
+
+- One view, one collection
+
+## Build a Generative AI Chatbot with PaLM API and Cloud functions for Firebase 2nd Gen
+
+- Firebase extension
+  - Group of lib
+  - transaction is one of this lib
+- Palm API extension
+  - Vertex AI - wrapper from google
+  - Chat bison
+
+## Ship faster with Feature flag
+
+- How to deploy code under development
+- Deploy Vs Release
+  - Deploy -> user get new binary
+  - Release -> user get access to new feature
+- **Done** means **Release**, not just work on my machine
+- Feature flag
+  - Allow us to frequently merge code to master without exposing it
+- Testing
+  - from master
+  - enabled flag for tester
+- Monitoring
+  - Small change between release easy to debug and fix
+
+## Managing design system in Flutter
+
+- Why need design system?
+  - Common language
+  - Speed up development
+  - Ensure consistency and familarity
+- Colors (Don't use Primary and Secondary palette directly)
+  - Primary palette
+  - Secondary palette
+  - Usage palette
+
+## Make for large Make for fold with Flutter
+
+- 23% more on iOS
+- 9% more on Android
+- Large Screen
+  - Continuity
+    - Rotations
+    - Folding-Unfold
+    - Multi-Window mode
