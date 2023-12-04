@@ -97,3 +97,31 @@ There are 10 sessions
     - Rotations
     - Folding-Unfold
     - Multi-Window mode
+- For the best app experience
+  - No orientation restriction
+  - Resizable
+
+## Diversity in AI
+
+- Bias
+  - Age
+  - Gender
+  - Race
+- They are from **Data**
+- Resulting in unfaire product
+- How to make AI fair
+  - Aware of bias(es)
+  - LIT (Language Interpreting tool) in NLP
+  - Know your data
+- Responsible AI
+  - AI should be
+    - Transpaency
+    - Fairness
+    - Accountability
+    - Privacy
+
+> Trust is hard to earn, easy to lose
+
+## Testing Strategy for Kotlin multiplatform projects
+
+- I haven't had any project on Kotlin so I didn't get much out of it lol.
