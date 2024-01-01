@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Short note from DevFest Bangkok 2023"
+title: Short note from DevFest Bangkok 2023
 ---
 
 ## Hi
