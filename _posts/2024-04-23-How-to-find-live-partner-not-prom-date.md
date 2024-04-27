@@ -3,6 +3,8 @@ layout: post
 title: How to find live partner not prom date
 ---
 
+Hi, welcome back to my blog. This article doesn't relate to tech at all. I found one interested book. The name of this booking is `How to not die alone` by Logan Ury. Logan Ury, a behavioral scientist turned dating coach, dismantles the common pitfalls people fall into while looking for love. By using insights from psychology and practical exercises, the book equips you to overcome these obstacles and make smarter decisions throughout your dating journey, ultimately helping you find and build the relationship you desire. I grab 2 key takeaways which will shift your perspective as you embark on your next romantic adventure!
+
 # What matters less than we think
 
 **Money:** Important but not everything. Prioritize compatibility over wealth.
