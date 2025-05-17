@@ -18,4 +18,10 @@ title: Send message to Telegram chat by Telegram bot
 
 2. หลังจากสมัครแล้ว น่าจะเห็นตามรูปด้านล่าง
 
+<p style="text-align: center;">
+    <img src="/assets/telegram/home.png" alt="home" />
+</p>
+
+3.
+
 https://api.telegram.org/bot<YourBOTToken>/getUpdates
