@@ -22,6 +22,6 @@ title: Send message to Telegram chat by Telegram bot
     <img src="/assets/telegram/home.png" alt="home" />
 </p>
 
-3. ใช้คำสั่ง
+3. ไปทีแชทของบอท แล้วใช้คำสั่ง
 
 https://api.telegram.org/bot<YourBOTToken>/getUpdates
