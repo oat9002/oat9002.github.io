@@ -22,6 +22,7 @@ title: Send message to Telegram chat by Telegram bot
     <img src="/assets/telegram/home.png" alt="home" />
 </p>
 
-3. ไปทีแชทของบอท แล้วใช้คำสั่ง
+3. ไปที BotFather แล้วใช้คำสั่ง `/newbot' เพื่อสร้างบอทของตัวเอง
+4. ตั้งชื่อบอทตามที่ชอบโดยชื่อบอทต้องลงท้ายด้วย `Bot` หรือ `_bot` ในตัวอย่างจะใช้ ``
 
 https://api.telegram.org/bot<YourBOTToken>/getUpdates
