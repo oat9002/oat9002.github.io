@@ -14,30 +14,30 @@ title: Send message to Telegram chat by Telegram bot
 
 # วิธีทำ
 
-1. สร้างบัญชี Telegram ผ่าน Application Telegram บน iOS, Android หรือ ผ่าน store ของ OS นั้น ๆ
+1.  สร้างบัญชี Telegram ผ่าน Application Telegram บน iOS, Android หรือ ผ่าน store ของ OS นั้น ๆ
 
-2. หลังจากสมัครแล้ว น่าจะเห็นตามรูปด้านล่าง
+2.  หลังจากสมัครแล้ว น่าจะเห็นตามรูปด้านล่าง
 
-<p style="text-align: center;">
-    <img src="/assets/telegram/home.png" alt="home" />
-</p>
+    <p style="text-align: center;">
+        <img src="/assets/telegram/home.png" alt="home" />
+    </p>
 
-3. ไปที BotFather แล้วใช้คำสั่ง `/newbot' เพื่อสร้างบอทของตัวเอง แล้วใส่ชือที่อยากได้ลงไป
+3.  ไปที BotFather แล้วใช้คำสั่ง `/newbot' เพื่อสร้างบอทของตัวเอง แล้วใส่ชือที่อยากได้ลงไป
 
-<p style="text-align: center;">
-    <img src="/assets/telegram/newbot.png" alt="newbot" />
-</p>
+    <p style="text-align: center;">
+        <img src="/assets/telegram/newbot.png" alt="newbot" />
+    </p>
 
-5. จากนั้นตั้ง username ของบอท โดยชื่อบอทต้องลงท้ายด้วย `Bot` หรือ `_bot`
+4.  จากนั้นตั้ง username ของบอท โดยชื่อบอทต้องลงท้ายด้วย `Bot` หรือ `_bot`
 
-<p style="text-align: center;">
-    <img src="/assets/telegram/username.png" alt="username" />
-</p>
+    <p style="text-align: center;">
+        <img src="/assets/telegram/username.png" alt="username" />
+    </p>
 
-6. เสร็จแล้วจะได้บอท token มา เราจะใช้ในการส่ง message อันจะเป็น secret ควรที่จะหาที่เก็บที่ปลอดภัย
+5.  เสร็จแล้วจะได้บอท token มา เราจะใช้ในการส่ง message อันจะเป็น secret ควรที่จะหาที่เก็บที่ปลอดภัย
 
-<p style="text-align: center;">
-    <img src="/assets/telegram/token.png" alt="token" />
-</p>
+    <p style="text-align: center;">
+        <img src="/assets/telegram/token.png" alt="token" />
+    </p>
 
-https://api.telegram.org/bot<YourBOTToken>/getUpdates
+6.  ถ้าเราไปดูเอกสารของ Telegram API นอกจาก bot token แล้วเรายังต้องมีอีกอย่างนึงคือ channel id ซึ่งวิธีง่าย ๆ คือให้เรา search หาชื่อ bot ตัวเอง แล้วส่งข้อความอะไรก็ได้ลงไป จากนั้นให้ไปที่ `https://api.telegram.org/bot<YourBOTToken>/getUpdates` แล้วเราจะได้ channel id มา
