@@ -43,10 +43,10 @@ title: Send message to Telegram chat by Telegram bot
 6.  ถ้าเราไปดูเอกสารของ Telegram API นอกจาก bot token แล้วเรายังต้องมีอีกอย่างนึงคือ chat id ซึ่งวิธีง่าย ๆ คือให้เรา search หาชื่อ bot ตัวเอง แล้วส่งข้อความอะไรก็ได้ลงไป จากนั้นให้ไปที่ `https://api.telegram.org/bot<YourBOTToken>/getUpdates` แล้วเราจะได้ chat id มา
 
     <p style="text-align: center;">
-        <img src="/assets/telegram/chatid.png" alt="token" />
+        <img src="/assets/telegram/chatid.png" alt="chatId" />
     </p>
 
-7.  พอได้ ิ bot token กับ chat id มาเรียบร้อย ตอนนี้ก็ถึงเวลาที่เรื่มทำตัวแอปที่ไว้ใช้ส่งข้อความ เมื่อเราลง bun เสร็จเรียบร้อยแล้ว ให้แก้ไฟล์ index.ts ตามนี้ (อย่าลืมแก้ botToken กับ chatId ด้วย)
+7.  พอได้ ิ bot token กับ chat id มาเรียบร้อย ตอนนี้ก็ถึงเวลาที่เรื่มทำตัวแอปที่ไว้ใช้ส่งข้อความ เมื่อเราลง bun และสร้างโปรเจคเสร็จเรียบร้อยแล้ว ให้แก้ไฟล์ `index.ts` ตามนี้ (อย่าลืมแก้ botToken กับ chatId ด้วยนะครับ)
 
     ```typescript
     const chatId = <chatId>;
@@ -71,3 +71,9 @@ title: Send message to Telegram chat by Telegram bot
     ```
 
 8.  ใช้คำสั่ง `bun index.ts` จะได้ผลลัพธ์ตามนี้
+
+    <p style="text-align: center;">
+        <img src="/assets/telegram/message.png" alt="message" />
+    </p>
+
+อันนี้จะเป็นตัวโปรเจคเผื่อถ้ารันไม่ได้ยังไงก็สามารถโคลนตัวโค้ดจาก [github](https://github.com/oat9002/telegram-message-api-demo) นี้ไปได้เลยครับ
