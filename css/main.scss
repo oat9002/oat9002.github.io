@@ -5,8 +5,7 @@
 @use "sass:color";
 
 // Our variables
-$base-font-family: LineSeedSans, LineSeedSansTH, LineSeedJP, "PT Sans",
-  Helvetica, Arial, sans-serif;
+$base-font-family: "Google Sans", "PT Sans", Helvetica, Arial, sans-serif;
 $base-font-size: 18px;
 $small-font-size: $base-font-size * 0.895;
 $large-font-size: $base-font-size * 1.4;
