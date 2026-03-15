@@ -11,6 +11,40 @@
                 >{{ page.title }}</a
             >
             {% endif %} {% endfor %}
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i class="fa fa-moon-o"></i>
+            </button>
         </div>
     </nav>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var toggleBtn = document.getElementById('theme-toggle');
+        var icon = toggleBtn.querySelector('i');
+        var currentTheme = document.documentElement.getAttribute('data-theme');
+        
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon-o');
+                icon.classList.add('fa-sun-o');
+            } else {
+                icon.classList.remove('fa-sun-o');
+                icon.classList.add('fa-moon-o');
+            }
+        }
+        
+        if (currentTheme) {
+            updateIcon(currentTheme);
+        }
+
+        toggleBtn.addEventListener('click', function() {
+            var theme = document.documentElement.getAttribute('data-theme');
+            var newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+    });
+</script>
