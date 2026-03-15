@@ -27,48 +27,46 @@
     }
 
     @include media-query($on-palm) {
-        position: absolute;
-        top: 3px;
-        right: 3px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-        z-index: 1;
+        float: none;
+        margin-right: 0;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
 
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 50px;
-            height: 30px;
-            line-height: 0;
-            text-align: center;
-        }
-
-        .trigger {
-            clear: both;
+        /* Hide scrollbar for a cleaner look */
+        &::-webkit-scrollbar {
             display: none;
         }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        
+        .trigger {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 15px;
         }
 
         .page-link {
-            display: block;
-            padding: 5px 10px;
+            display: inline-block;
+            margin-right: 15px;
+            
+            &:not(:first-child) {
+                margin-left: 0;
+            }
         }
 
         .theme-toggle {
             display: inline-block;
-            margin: 5px 10px;
+            margin-right: 0;
         }
     }
 
     .page-link {
         font-family: $base-font-family;
         font-weight: 700 !important;
+        font-size: 20px;
         line-height: $base-line-height;
         letter-spacing: 0.05em;
 
@@ -85,7 +83,7 @@
         background: transparent;
         border: none;
         color: var(--text-color);
-        font-size: 1.2rem;
+        font-size: 20px;
         cursor: pointer;
         padding: 5px;
         margin-left: 20px;
@@ -132,6 +130,7 @@
 
 .page-heading {
     font-size: 20px;
+    letter-spacing: 0.05em;
     padding-top: 2px;
     display: inline;
 }
